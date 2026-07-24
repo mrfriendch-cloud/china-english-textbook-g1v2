@@ -1,0 +1,474 @@
+{
+  "voice": "en-US-AnaNeural",
+  "count": 78,
+  "entries": {
+    "u1_chair": {
+      "text": "chair",
+      "translation": "椅子",
+      "file": "audio/u1_chair.mp3",
+      "type": "vocabulary"
+    },
+    "u1_desk": {
+      "text": "desk",
+      "translation": "书桌",
+      "file": "audio/u1_desk.mp3",
+      "type": "vocabulary"
+    },
+    "u1_blackboard": {
+      "text": "blackboard",
+      "translation": "黑板",
+      "file": "audio/u1_blackboard.mp3",
+      "type": "vocabulary"
+    },
+    "u1_on": {
+      "text": "on",
+      "translation": "在……上面",
+      "file": "audio/u1_on.mp3",
+      "type": "vocabulary"
+    },
+    "u1_under": {
+      "text": "under",
+      "translation": "在……下面",
+      "file": "audio/u1_under.mp3",
+      "type": "vocabulary"
+    },
+    "u1_in": {
+      "text": "in",
+      "translation": "在……里面",
+      "file": "audio/u1_in.mp3",
+      "type": "vocabulary"
+    },
+    "u1_where": {
+      "text": "where",
+      "translation": "在哪里",
+      "file": "audio/u1_where.mp3",
+      "type": "vocabulary"
+    },
+    "u1_the": {
+      "text": "the",
+      "translation": "放在名词前特指",
+      "file": "audio/u1_the.mp3",
+      "type": "vocabulary"
+    },
+    "u1_dlg_1": {
+      "text": "Where is the cat?",
+      "translation": "猫在哪里？",
+      "file": "audio/u1_dlg_1.mp3",
+      "type": "dialogue"
+    },
+    "u1_dlg_2": {
+      "text": "It's on the chair.",
+      "translation": "它在椅子上。",
+      "file": "audio/u1_dlg_2.mp3",
+      "type": "dialogue"
+    },
+    "u1_dlg_3": {
+      "text": "Where is the ruler?",
+      "translation": "尺子在哪里？",
+      "file": "audio/u1_dlg_3.mp3",
+      "type": "dialogue"
+    },
+    "u1_dlg_4": {
+      "text": "It's under the desk.",
+      "translation": "它在书桌下面。",
+      "file": "audio/u1_dlg_4.mp3",
+      "type": "dialogue"
+    },
+    "u1_dlg_5": {
+      "text": "Put your book on the desk.",
+      "translation": "把你的书放在桌子上。",
+      "file": "audio/u1_dlg_5.mp3",
+      "type": "dialogue"
+    },
+    "u2_light": {
+      "text": "light",
+      "translation": "灯",
+      "file": "audio/u2_light.mp3",
+      "type": "vocabulary"
+    },
+    "u2_bed": {
+      "text": "bed",
+      "translation": "床",
+      "file": "audio/u2_bed.mp3",
+      "type": "vocabulary"
+    },
+    "u2_door": {
+      "text": "door",
+      "translation": "门",
+      "file": "audio/u2_door.mp3",
+      "type": "vocabulary"
+    },
+    "u2_box": {
+      "text": "box",
+      "translation": "盒子，箱子",
+      "file": "audio/u2_box.mp3",
+      "type": "vocabulary"
+    },
+    "u2_near": {
+      "text": "near",
+      "translation": "在……附近",
+      "file": "audio/u2_near.mp3",
+      "type": "vocabulary"
+    },
+    "u2_behind": {
+      "text": "behind",
+      "translation": "在……后面",
+      "file": "audio/u2_behind.mp3",
+      "type": "vocabulary"
+    },
+    "u2_dlg_1": {
+      "text": "What's in your room?",
+      "translation": "你的房间里有什么？",
+      "file": "audio/u2_dlg_1.mp3",
+      "type": "dialogue"
+    },
+    "u2_dlg_2": {
+      "text": "A bed, a light and a desk.",
+      "translation": "一张床、一盏灯和一张书桌。",
+      "file": "audio/u2_dlg_2.mp3",
+      "type": "dialogue"
+    },
+    "u2_dlg_3": {
+      "text": "Where is the light?",
+      "translation": "灯在哪里？",
+      "file": "audio/u2_dlg_3.mp3",
+      "type": "dialogue"
+    },
+    "u2_dlg_4": {
+      "text": "It's near the window.",
+      "translation": "它在窗户附近。",
+      "file": "audio/u2_dlg_4.mp3",
+      "type": "dialogue"
+    },
+    "u2_dlg_5": {
+      "text": "Where is the box?",
+      "translation": "盒子在哪里？",
+      "file": "audio/u2_dlg_5.mp3",
+      "type": "dialogue"
+    },
+    "u2_dlg_6": {
+      "text": "It's behind the door.",
+      "translation": "它在门后面。",
+      "file": "audio/u2_dlg_6.mp3",
+      "type": "dialogue"
+    },
+    "u3_plane": {
+      "text": "plane",
+      "translation": "飞机",
+      "file": "audio/u3_plane.mp3",
+      "type": "vocabulary"
+    },
+    "u3_ball": {
+      "text": "ball",
+      "translation": "球",
+      "file": "audio/u3_ball.mp3",
+      "type": "vocabulary"
+    },
+    "u3_doll": {
+      "text": "doll",
+      "translation": "玩偶，娃娃",
+      "file": "audio/u3_doll.mp3",
+      "type": "vocabulary"
+    },
+    "u3_train": {
+      "text": "train",
+      "translation": "火车",
+      "file": "audio/u3_train.mp3",
+      "type": "vocabulary"
+    },
+    "u3_car": {
+      "text": "car",
+      "translation": "小汽车",
+      "file": "audio/u3_car.mp3",
+      "type": "vocabulary"
+    },
+    "u3_bear": {
+      "text": "bear",
+      "translation": "玩具熊",
+      "file": "audio/u3_bear.mp3",
+      "type": "vocabulary"
+    },
+    "u3_can": {
+      "text": "can",
+      "translation": "能够，可以",
+      "file": "audio/u3_can.mp3",
+      "type": "vocabulary"
+    },
+    "u3_sure": {
+      "text": "sure",
+      "translation": "当然",
+      "file": "audio/u3_sure.mp3",
+      "type": "vocabulary"
+    },
+    "u3_sorry": {
+      "text": "sorry",
+      "translation": "对不起",
+      "file": "audio/u3_sorry.mp3",
+      "type": "vocabulary"
+    },
+    "u3_dlg_1": {
+      "text": "Can I have a car?",
+      "translation": "我可以要辆小汽车吗？",
+      "file": "audio/u3_dlg_1.mp3",
+      "type": "dialogue"
+    },
+    "u3_dlg_2": {
+      "text": "Sure. Here you are.",
+      "translation": "当然可以。给你。",
+      "file": "audio/u3_dlg_2.mp3",
+      "type": "dialogue"
+    },
+    "u3_dlg_3": {
+      "text": "Can I have a plane?",
+      "translation": "我可以要架飞机吗？",
+      "file": "audio/u3_dlg_3.mp3",
+      "type": "dialogue"
+    },
+    "u3_dlg_4": {
+      "text": "Sorry, no.",
+      "translation": "对不起，不行。",
+      "file": "audio/u3_dlg_4.mp3",
+      "type": "dialogue"
+    },
+    "u3_dlg_5": {
+      "text": "I have a bear.",
+      "translation": "我有一只玩具熊。",
+      "file": "audio/u3_dlg_5.mp3",
+      "type": "dialogue"
+    },
+    "u4_rice": {
+      "text": "rice",
+      "translation": "米饭",
+      "file": "audio/u4_rice.mp3",
+      "type": "vocabulary"
+    },
+    "u4_noodles": {
+      "text": "noodles",
+      "translation": "面条",
+      "file": "audio/u4_noodles.mp3",
+      "type": "vocabulary"
+    },
+    "u4_vegetable": {
+      "text": "vegetable",
+      "translation": "蔬菜",
+      "file": "audio/u4_vegetable.mp3",
+      "type": "vocabulary"
+    },
+    "u4_fish": {
+      "text": "fish",
+      "translation": "鱼",
+      "file": "audio/u4_fish.mp3",
+      "type": "vocabulary"
+    },
+    "u4_chicken": {
+      "text": "chicken",
+      "translation": "鸡肉",
+      "file": "audio/u4_chicken.mp3",
+      "type": "vocabulary"
+    },
+    "u4_egg": {
+      "text": "egg",
+      "translation": "鸡蛋",
+      "file": "audio/u4_egg.mp3",
+      "type": "vocabulary"
+    },
+    "u4_hungry": {
+      "text": "hungry",
+      "translation": "饥饿的",
+      "file": "audio/u4_hungry.mp3",
+      "type": "vocabulary"
+    },
+    "u4_want": {
+      "text": "want",
+      "translation": "想要",
+      "file": "audio/u4_want.mp3",
+      "type": "vocabulary"
+    },
+    "u4_and": {
+      "text": "and",
+      "translation": "和",
+      "file": "audio/u4_and.mp3",
+      "type": "vocabulary"
+    },
+    "u4_dlg_1": {
+      "text": "I'm hungry.",
+      "translation": "我饿了。",
+      "file": "audio/u4_dlg_1.mp3",
+      "type": "dialogue"
+    },
+    "u4_dlg_2": {
+      "text": "I want rice and chicken.",
+      "translation": "我想吃米饭和鸡肉。",
+      "file": "audio/u4_dlg_2.mp3",
+      "type": "dialogue"
+    },
+    "u4_dlg_3": {
+      "text": "What do you want?",
+      "translation": "你想要什么？",
+      "file": "audio/u4_dlg_3.mp3",
+      "type": "dialogue"
+    },
+    "u4_dlg_4": {
+      "text": "I want noodles.",
+      "translation": "我想要面条。",
+      "file": "audio/u4_dlg_4.mp3",
+      "type": "dialogue"
+    },
+    "u4_dlg_5": {
+      "text": "Do you like fish?",
+      "translation": "你喜欢鱼肉吗？",
+      "file": "audio/u4_dlg_5.mp3",
+      "type": "dialogue"
+    },
+    "u4_dlg_6": {
+      "text": "Yes, I do.",
+      "translation": "是的，我喜欢。",
+      "file": "audio/u4_dlg_6.mp3",
+      "type": "dialogue"
+    },
+    "u5_juice": {
+      "text": "juice",
+      "translation": "果汁",
+      "file": "audio/u5_juice.mp3",
+      "type": "vocabulary"
+    },
+    "u5_tea": {
+      "text": "tea",
+      "translation": "茶",
+      "file": "audio/u5_tea.mp3",
+      "type": "vocabulary"
+    },
+    "u5_milk": {
+      "text": "milk",
+      "translation": "牛奶",
+      "file": "audio/u5_milk.mp3",
+      "type": "vocabulary"
+    },
+    "u5_water": {
+      "text": "water",
+      "translation": "水",
+      "file": "audio/u5_water.mp3",
+      "type": "vocabulary"
+    },
+    "u5_thirsty": {
+      "text": "thirsty",
+      "translation": "口渴的",
+      "file": "audio/u5_thirsty.mp3",
+      "type": "vocabulary"
+    },
+    "u5_thanks": {
+      "text": "thanks",
+      "translation": "感谢",
+      "file": "audio/u5_thanks.mp3",
+      "type": "vocabulary"
+    },
+    "u5_dlg_1": {
+      "text": "I'm thirsty.",
+      "translation": "我口渴了。",
+      "file": "audio/u5_dlg_1.mp3",
+      "type": "dialogue"
+    },
+    "u5_dlg_2": {
+      "text": "I want water.",
+      "translation": "我想喝水。",
+      "file": "audio/u5_dlg_2.mp3",
+      "type": "dialogue"
+    },
+    "u5_dlg_3": {
+      "text": "Can I have some milk?",
+      "translation": "我可以喝点牛奶吗？",
+      "file": "audio/u5_dlg_3.mp3",
+      "type": "dialogue"
+    },
+    "u5_dlg_4": {
+      "text": "Here you are.",
+      "translation": "给你。",
+      "file": "audio/u5_dlg_4.mp3",
+      "type": "dialogue"
+    },
+    "u5_dlg_5": {
+      "text": "Thanks.",
+      "translation": "谢谢。",
+      "file": "audio/u5_dlg_5.mp3",
+      "type": "dialogue"
+    },
+    "u6_shirt": {
+      "text": "shirt",
+      "translation": "衬衫",
+      "file": "audio/u6_shirt.mp3",
+      "type": "vocabulary"
+    },
+    "u6_tshirt": {
+      "text": "T-shirt",
+      "translation": "T恤衫",
+      "file": "audio/u6_tshirt.mp3",
+      "type": "vocabulary"
+    },
+    "u6_skirt": {
+      "text": "skirt",
+      "translation": "裙子",
+      "file": "audio/u6_skirt.mp3",
+      "type": "vocabulary"
+    },
+    "u6_dress": {
+      "text": "dress",
+      "translation": "连衣裙",
+      "file": "audio/u6_dress.mp3",
+      "type": "vocabulary"
+    },
+    "u6_socks": {
+      "text": "socks",
+      "translation": "短袜",
+      "file": "audio/u6_socks.mp3",
+      "type": "vocabulary"
+    },
+    "u6_shorts": {
+      "text": "shorts",
+      "translation": "短裤",
+      "file": "audio/u6_shorts.mp3",
+      "type": "vocabulary"
+    },
+    "u6_your": {
+      "text": "your",
+      "translation": "你的",
+      "file": "audio/u6_your.mp3",
+      "type": "vocabulary"
+    },
+    "u6_dlg_1": {
+      "text": "Put on your shirt.",
+      "translation": "穿上你的衬衫。",
+      "file": "audio/u6_dlg_1.mp3",
+      "type": "dialogue"
+    },
+    "u6_dlg_2": {
+      "text": "Take off your socks.",
+      "translation": "脱下你的短袜。",
+      "file": "audio/u6_dlg_2.mp3",
+      "type": "dialogue"
+    },
+    "u6_dlg_3": {
+      "text": "I like your dress.",
+      "translation": "我喜欢你的连衣裙。",
+      "file": "audio/u6_dlg_3.mp3",
+      "type": "dialogue"
+    },
+    "u6_dlg_4": {
+      "text": "Thank you.",
+      "translation": "谢谢你。",
+      "file": "audio/u6_dlg_4.mp3",
+      "type": "dialogue"
+    },
+    "u6_dlg_5": {
+      "text": "Is this your T-shirt?",
+      "translation": "这是你的T恤衫吗？",
+      "file": "audio/u6_dlg_5.mp3",
+      "type": "dialogue"
+    },
+    "u6_dlg_6": {
+      "text": "Yes, it is.",
+      "translation": "是的，它是。",
+      "file": "audio/u6_dlg_6.mp3",
+      "type": "dialogue"
+    }
+  }
+}

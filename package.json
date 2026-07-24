@@ -1,0 +1,20 @@
+{
+  "name": "china-english-textbook-app",
+  "version": "1.0.0",
+  "description": "Digitized English Textbook App Template",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "serve": "node server.js",
+    "build": "node scripts/build_dist.js"
+  },
+  "keywords": [
+    "english-textbook",
+    "education",
+    "pdf-to-html"
+  ],
+  "author": "Antigravity AI",
+  "license": "MIT"
+}

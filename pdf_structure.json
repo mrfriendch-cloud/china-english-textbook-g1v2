@@ -1,0 +1,311 @@
+{
+  "title": "义务教育教科书 英语（一年级起点）一年级下册",
+  "grade": "一年级下册",
+  "publisher": "人民教育出版社",
+  "total_pages": 71,
+  "units": [
+    {
+      "id": "u1",
+      "title": "Unit 1 Classroom",
+      "subtitle": "教室",
+      "pages": [6, 7, 8, 9, 10, 11, 12, 13],
+      "vocabulary": [
+        { "word": "chair", "translation": "椅子", "audio": "u1_chair" },
+        { "word": "desk", "translation": "书桌", "audio": "u1_desk" },
+        { "word": "blackboard", "translation": "黑板", "audio": "u1_blackboard" },
+        { "word": "on", "translation": "在……上面", "audio": "u1_on" },
+        { "word": "under", "translation": "在……下面", "audio": "u1_under" },
+        { "word": "in", "translation": "在……里面", "audio": "u1_in" },
+        { "word": "where", "translation": "在哪里", "audio": "u1_where" },
+        { "word": "the", "translation": "放在名词前特指", "audio": "u1_the" }
+      ],
+      "dialogues": [
+        {
+          "speaker": "Bill",
+          "text": "Where is the cat?",
+          "translation": "猫在哪里？",
+          "audio": "u1_dlg_1"
+        },
+        {
+          "speaker": "Joy",
+          "text": "It's on the chair.",
+          "translation": "它在椅子上。",
+          "audio": "u1_dlg_2"
+        },
+        {
+          "speaker": "Binbin",
+          "text": "Where is the ruler?",
+          "translation": "尺子在哪里？",
+          "audio": "u1_dlg_3"
+        },
+        {
+          "speaker": "Lily",
+          "text": "It's under the desk.",
+          "translation": "它在书桌下面。",
+          "audio": "u1_dlg_4"
+        },
+        {
+          "speaker": "Teacher",
+          "text": "Put your book on the desk.",
+          "translation": "把你的书放在桌子上。",
+          "audio": "u1_dlg_5"
+        }
+      ]
+    },
+    {
+      "id": "u2",
+      "title": "Unit 2 Room",
+      "subtitle": "房间",
+      "pages": [14, 15, 16, 17, 18, 19, 20, 21],
+      "vocabulary": [
+        { "word": "light", "translation": "灯", "audio": "u2_light" },
+        { "word": "bed", "translation": "床", "audio": "u2_bed" },
+        { "word": "door", "translation": "门", "audio": "u2_door" },
+        { "word": "box", "translation": "盒子，箱子", "audio": "u2_box" },
+        { "word": "near", "translation": "在……附近", "audio": "u2_near" },
+        { "word": "behind", "translation": "在……后面", "audio": "u2_behind" }
+      ],
+      "dialogues": [
+        {
+          "speaker": "Yaoyao",
+          "text": "What's in your room?",
+          "translation": "你的房间里有什么？",
+          "audio": "u2_dlg_1"
+        },
+        {
+          "speaker": "Joy",
+          "text": "A bed, a light and a desk.",
+          "translation": "一张床、一盏灯和一张书桌。",
+          "audio": "u2_dlg_2"
+        },
+        {
+          "speaker": "Bill",
+          "text": "Where is the light?",
+          "translation": "灯在哪里？",
+          "audio": "u2_dlg_3"
+        },
+        {
+          "speaker": "Andy",
+          "text": "It's near the window.",
+          "translation": "它在窗户附近。",
+          "audio": "u2_dlg_4"
+        },
+        {
+          "speaker": "Binbin",
+          "text": "Where is the box?",
+          "translation": "盒子在哪里？",
+          "audio": "u2_dlg_5"
+        },
+        {
+          "speaker": "Lily",
+          "text": "It's behind the door.",
+          "translation": "它在门后面。",
+          "audio": "u2_dlg_6"
+        }
+      ]
+    },
+    {
+      "id": "u3",
+      "title": "Unit 3 Toys",
+      "subtitle": "玩具",
+      "pages": [22, 23, 24, 25, 26, 27, 28, 29],
+      "vocabulary": [
+        { "word": "plane", "translation": "飞机", "audio": "u3_plane" },
+        { "word": "ball", "translation": "球", "audio": "u3_ball" },
+        { "word": "doll", "translation": "玩偶，娃娃", "audio": "u3_doll" },
+        { "word": "train", "translation": "火车", "audio": "u3_train" },
+        { "word": "car", "translation": "小汽车", "audio": "u3_car" },
+        { "word": "bear", "translation": "玩具熊", "audio": "u3_bear" },
+        { "word": "can", "translation": "能够，可以", "audio": "u3_can" },
+        { "word": "sure", "translation": "当然", "audio": "u3_sure" },
+        { "word": "sorry", "translation": "对不起", "audio": "u3_sorry" }
+      ],
+      "dialogues": [
+        {
+          "speaker": "Joy",
+          "text": "Can I have a car?",
+          "translation": "我可以要辆小汽车吗？",
+          "audio": "u3_dlg_1"
+        },
+        {
+          "speaker": "Bill",
+          "text": "Sure. Here you are.",
+          "translation": "当然可以。给你。",
+          "audio": "u3_dlg_2"
+        },
+        {
+          "speaker": "Yaoyao",
+          "text": "Can I have a plane?",
+          "translation": "我可以要架飞机吗？",
+          "audio": "u3_dlg_3"
+        },
+        {
+          "speaker": "Andy",
+          "text": "Sorry, no.",
+          "translation": "对不起，不行。",
+          "audio": "u3_dlg_4"
+        },
+        {
+          "speaker": "Lily",
+          "text": "I have a bear.",
+          "translation": "我有一只玩具熊。",
+          "audio": "u3_dlg_5"
+        }
+      ]
+    },
+    {
+      "id": "u4",
+      "title": "Unit 4 Food",
+      "subtitle": "食物",
+      "pages": [32, 33, 34, 35, 36, 37, 38, 39],
+      "vocabulary": [
+        { "word": "rice", "translation": "米饭", "audio": "u4_rice" },
+        { "word": "noodles", "translation": "面条", "audio": "u4_noodles" },
+        { "word": "vegetable", "translation": "蔬菜", "audio": "u4_vegetable" },
+        { "word": "fish", "translation": "鱼", "audio": "u4_fish" },
+        { "word": "chicken", "translation": "鸡肉", "audio": "u4_chicken" },
+        { "word": "egg", "translation": "鸡蛋", "audio": "u4_egg" },
+        { "word": "hungry", "translation": "饥饿的", "audio": "u4_hungry" },
+        { "word": "want", "translation": "想要", "audio": "u4_want" },
+        { "word": "and", "translation": "和", "audio": "u4_and" }
+      ],
+      "dialogues": [
+        {
+          "speaker": "Andy",
+          "text": "I'm hungry.",
+          "translation": "我饿了。",
+          "audio": "u4_dlg_1"
+        },
+        {
+          "speaker": "Binbin",
+          "text": "I want rice and chicken.",
+          "translation": "我想吃米饭和鸡肉。",
+          "audio": "u4_dlg_2"
+        },
+        {
+          "speaker": "Joy",
+          "text": "What do you want?",
+          "translation": "你想要什么？",
+          "audio": "u4_dlg_3"
+        },
+        {
+          "speaker": "Lily",
+          "text": "I want noodles.",
+          "translation": "我想要面条。",
+          "audio": "u4_dlg_4"
+        },
+        {
+          "speaker": "Bill",
+          "text": "Do you like fish?",
+          "translation": "你喜欢鱼肉吗？",
+          "audio": "u4_dlg_5"
+        },
+        {
+          "speaker": "Yaoyao",
+          "text": "Yes, I do.",
+          "translation": "是的，我喜欢。",
+          "audio": "u4_dlg_6"
+        }
+      ]
+    },
+    {
+      "id": "u5",
+      "title": "Unit 5 Drink",
+      "subtitle": "饮料",
+      "pages": [40, 41, 42, 43, 44, 45, 46, 47],
+      "vocabulary": [
+        { "word": "juice", "translation": "果汁", "audio": "u5_juice" },
+        { "word": "tea", "translation": "茶", "audio": "u5_tea" },
+        { "word": "milk", "translation": "牛奶", "audio": "u5_milk" },
+        { "word": "water", "translation": "水", "audio": "u5_water" },
+        { "word": "thirsty", "translation": "口渴的", "audio": "u5_thirsty" },
+        { "word": "thanks", "translation": "感谢", "audio": "u5_thanks" }
+      ],
+      "dialogues": [
+        {
+          "speaker": "Binbin",
+          "text": "I'm thirsty.",
+          "translation": "我口渴了。",
+          "audio": "u5_dlg_1"
+        },
+        {
+          "speaker": "Andy",
+          "text": "I want water.",
+          "translation": "我想喝水。",
+          "audio": "u5_dlg_2"
+        },
+        {
+          "speaker": "Lily",
+          "text": "Can I have some milk?",
+          "translation": "我可以喝点牛奶吗？",
+          "audio": "u5_dlg_3"
+        },
+        {
+          "speaker": "Joy",
+          "text": "Here you are.",
+          "translation": "给你。",
+          "audio": "u5_dlg_4"
+        },
+        {
+          "speaker": "Lily",
+          "text": "Thanks.",
+          "translation": "谢谢。",
+          "audio": "u5_dlg_5"
+        }
+      ]
+    },
+    {
+      "id": "u6",
+      "title": "Unit 6 Clothes",
+      "subtitle": "服装",
+      "pages": [48, 49, 50, 51, 52, 53, 54, 55],
+      "vocabulary": [
+        { "word": "shirt", "translation": "衬衫", "audio": "u6_shirt" },
+        { "word": "T-shirt", "translation": "T恤衫", "audio": "u6_tshirt" },
+        { "word": "skirt", "translation": "裙子", "audio": "u6_skirt" },
+        { "word": "dress", "translation": "连衣裙", "audio": "u6_dress" },
+        { "word": "socks", "translation": "短袜", "audio": "u6_socks" },
+        { "word": "shorts", "translation": "短裤", "audio": "u6_shorts" },
+        { "word": "your", "translation": "你的", "audio": "u6_your" }
+      ],
+      "dialogues": [
+        {
+          "speaker": "Teacher",
+          "text": "Put on your shirt.",
+          "translation": "穿上你的衬衫。",
+          "audio": "u6_dlg_1"
+        },
+        {
+          "speaker": "Bill",
+          "text": "Take off your socks.",
+          "translation": "脱下你的短袜。",
+          "audio": "u6_dlg_2"
+        },
+        {
+          "speaker": "Joy",
+          "text": "I like your dress.",
+          "translation": "我喜欢你的连衣裙。",
+          "audio": "u6_dlg_3"
+        },
+        {
+          "speaker": "Yaoyao",
+          "text": "Thank you.",
+          "translation": "谢谢你。",
+          "audio": "u6_dlg_4"
+        },
+        {
+          "speaker": "Andy",
+          "text": "Is this your T-shirt?",
+          "translation": "这是你的T恤衫吗？",
+          "audio": "u6_dlg_5"
+        },
+        {
+          "speaker": "Binbin",
+          "text": "Yes, it is.",
+          "translation": "是的，它是。",
+          "audio": "u6_dlg_6"
+        }
+      ]
+    }
+  ]
+}

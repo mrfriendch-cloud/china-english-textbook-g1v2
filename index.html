@@ -1,0 +1,1744 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>义务教育教科书 英语（一年级起点）一年级下册 | 电子教材与互动学习平台</title>
+  <meta name="description" content="义务教育教科书 英语（一年级起点）一年级下册 数字化HTML电子教材，包含单元课程、本地提取音轨、词汇朗读、歌谣与歌曲及高清原版页面预览。">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Mobile Sidebar Backdrop Overlay -->
+  <div id="sidebarOverlay" class="sidebar-overlay" onclick="toggleSidebar(false)"></div>
+
+  <!-- Audio Toast Visual Indicator -->
+  <div id="audioToast" class="audio-toast">
+    <span style="font-size:1.2rem;">🔊</span>
+    <span id="audioToastText">正在播放...</span>
+  </div>
+
+  <!-- Floating Back-To-Top Button -->
+  <button type="button" id="backToTopBtn" class="floating-top-btn" onclick="scrollToTop()" aria-label="回到顶部" title="回到顶部">▲</button>
+
+  <div class="app-container">
+    <!-- Sidebar Navigation -->
+    <aside class="app-sidebar">
+      <div class="sidebar-header">
+        <div class="sidebar-title">
+          <h1>英语 一年级下册</h1>
+          <span>义务教育教科书（一年级起点）</span>
+        </div>
+        <button class="close-sidebar-btn" onclick="toggleSidebar(false)" aria-label="关闭菜单">✕</button>
+      </div>
+      
+      <nav class="sidebar-nav">
+        <div class="nav-section-title">课程单元 Navigation</div>
+        <a href="#unit-1" class="nav-item active" onclick="switchNav('unit-1', this)">
+          <span class="icon">🏫</span>
+          <span>Unit 1 Classroom</span>
+          <span class="badge">P6-13</span>
+        </a>
+        <a href="#unit-2" class="nav-item" onclick="switchNav('unit-2', this)">
+          <span class="icon">🛏️</span>
+          <span>Unit 2 Room</span>
+          <span class="badge">P14-21</span>
+        </a>
+        <a href="#unit-3" class="nav-item" onclick="switchNav('unit-3', this)">
+          <span class="icon">🧸</span>
+          <span>Unit 3 Toys</span>
+          <span class="badge">P22-29</span>
+        </a>
+        <a href="#revision-1" class="nav-item" onclick="switchNav('revision-1', this)">
+          <span class="icon">🎲</span>
+          <span>Revision 1</span>
+          <span class="badge">P30-31</span>
+        </a>
+        <a href="#unit-4" class="nav-item" onclick="switchNav('unit-4', this)">
+          <span class="icon">🍚</span>
+          <span>Unit 4 Food</span>
+          <span class="badge">P32-39</span>
+        </a>
+        <a href="#unit-5" class="nav-item" onclick="switchNav('unit-5', this)">
+          <span class="icon">🧃</span>
+          <span>Unit 5 Drink</span>
+          <span class="badge">P40-47</span>
+        </a>
+        <a href="#unit-6" class="nav-item" onclick="switchNav('unit-6', this)">
+          <span class="icon">👔</span>
+          <span>Unit 6 Clothes</span>
+          <span class="badge">P48-55</span>
+        </a>
+        <a href="#revision-2" class="nav-item" onclick="switchNav('revision-2', this)">
+          <span class="icon">🎲</span>
+          <span>Revision 2</span>
+          <span class="badge">P56-57</span>
+        </a>
+
+        <div class="nav-section-title">附录与词汇 Appendices</div>
+        <a href="#app-chants" class="nav-item" onclick="switchNav('app-chants', this)">
+          <span class="icon">🎵</span>
+          <span>歌谣与歌曲 Chants & Songs</span>
+        </a>
+        <a href="#app-vocab" class="nav-item" onclick="switchNav('app-vocab', this)">
+          <span class="icon">📖</span>
+          <span>单元词汇表 Vocabulary</span>
+        </a>
+        <a href="#app-expressions" class="nav-item" onclick="switchNav('app-expressions', this)">
+          <span class="icon">💬</span>
+          <span>常用表达法 Expressions</span>
+        </a>
+      </nav>
+    </aside>
+
+    <!-- Main Content Container -->
+    <main class="app-main">
+      <!-- Top Navigation Header -->
+      <header class="top-bar">
+        <div class="top-bar-main">
+          <div class="top-bar-brand">
+            <button class="menu-toggle-btn" onclick="toggleSidebar()" aria-label="切换菜单" title="切换侧边栏">
+              <span>☰</span>
+            </button>
+            <div class="header-book-title">
+              <span class="book-title-main">英语 一年级下册</span>
+              <span class="book-title-sub">义务教育教科书（一年级起点）</span>
+            </div>
+          </div>
+
+          <div class="top-bar-center">
+            <div class="view-mode-tabs">
+              <button id="tab-interactive" class="view-tab active" onclick="setViewMode('interactive')">
+                <span>📚 互动课程</span>
+              </button>
+              <button id="tab-pageview" class="view-tab" onclick="setViewMode('pageview')">
+                <span>📖 原版全页</span>
+              </button>
+              <button id="tab-vocab" class="view-tab" onclick="setViewMode('vocab')">
+                <span>🗂️ 词汇卡片</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="top-bar-right">
+            <div class="search-box">
+              <span class="search-icon">🔍</span>
+              <input type="text" id="searchInput" placeholder="搜索单词、句子或中文..." oninput="handleSearch()">
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Content Viewport -->
+      <div class="content-viewport" id="contentViewport">
+                <!-- SECTION: UNIT 1 CLASSROOM -->
+        <section id="unit-1" class="unit-section view-pane">
+          <div class="unit-header-card" style="background: linear-gradient(135deg, #0284c7 0%, #0d9488 100%);">
+            <span class="unit-badge">Unit 1</span>
+            <h2 class="unit-title">Classroom (教室)</h2>
+            <p class="unit-desc">学习教室物品词汇及询问与回答物品位置的句型 (P6 - P13)</p>
+          </div>
+
+          <div class="lessons-grid">
+            <div class="lesson-card">
+              <div class="lesson-title">
+                <span>核心词汇 Vocabulary</span>
+                <span class="page-tag" onclick="jumpToPage(6)">P6 📄</span>
+              </div>
+              <div class="vocab-grid">
+                <div class="vocab-card audio-trigger" data-audio="audio/u1_chair.mp3" data-text="chair">
+                  <div class="vocab-word">chair 🎵</div>
+                  <div class="vocab-phonetic">/tʃeə/</div>
+                  <div class="vocab-meaning">椅子</div>
+                </div>
+                <div class="vocab-card audio-trigger" data-audio="audio/u1_desk.mp3" data-text="desk">
+                  <div class="vocab-word">desk 🎵</div>
+                  <div class="vocab-phonetic">/desk/</div>
+                  <div class="vocab-meaning">书桌，写字台</div>
+                </div>
+                <div class="vocab-card audio-trigger" data-audio="audio/u1_blackboard.mp3" data-text="blackboard">
+                  <div class="vocab-word">blackboard 🎵</div>
+                  <div class="vocab-phonetic">/ˈblækbɔːd/</div>
+                  <div class="vocab-meaning">黑板</div>
+                </div>
+                <div class="vocab-card audio-trigger" data-audio="audio/u1_on.mp3" data-text="on">
+                  <div class="vocab-word">on 🎵</div>
+                  <div class="vocab-phonetic">/ɒn/</div>
+                  <div class="vocab-meaning">在……上面</div>
+                </div>
+                <div class="vocab-card audio-trigger" data-audio="audio/u1_under.mp3" data-text="under">
+                  <div class="vocab-word">under 🎵</div>
+                  <div class="vocab-phonetic">/ˈʌndə/</div>
+                  <div class="vocab-meaning">在……下面</div>
+                </div>
+                <div class="vocab-card audio-trigger" data-audio="audio/u1_in.mp3" data-text="in">
+                  <div class="vocab-word">in 🎵</div>
+                  <div class="vocab-phonetic">/ɪn/</div>
+                  <div class="vocab-meaning">在……里面</div>
+                </div>
+                <div class="vocab-card audio-trigger" data-audio="audio/u1_where.mp3" data-text="where">
+                  <div class="vocab-word">where 🎵</div>
+                  <div class="vocab-phonetic">/weə/</div>
+                  <div class="vocab-meaning">在哪里</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="lesson-card">
+              <div class="lesson-title">
+                <span>重点对话与句型 Dialogues</span>
+                <span class="page-tag" onclick="jumpToPage(7)">P7 📄</span>
+              </div>
+              <div class="dialogue-list">
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/u1_dlg_1.mp3" data-text="Where is the cat?">
+                  <div>
+                    <strong>Bill:</strong> Where is the cat?
+                    <div style="font-size:0.8rem; color:var(--text-muted);">猫在哪里？</div>
+                  </div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/u1_dlg_2.mp3" data-text="It's on the chair.">
+                  <div>
+                    <strong>Joy:</strong> It's on the chair.
+                    <div style="font-size:0.8rem; color:var(--text-muted);">它在椅子上面。</div>
+                  </div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/u1_dlg_3.mp3" data-text="Where is the ruler?">
+                  <div>
+                    <strong>Binbin:</strong> Where is the ruler?
+                    <div style="font-size:0.8rem; color:var(--text-muted);">尺子在哪里？</div>
+                  </div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/u1_dlg_4.mp3" data-text="It's under the desk.">
+                  <div>
+                    <strong>Lily:</strong> It's under the desk.
+                    <div style="font-size:0.8rem; color:var(--text-muted);">它在书桌下面。</div>
+                  </div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/u1_dlg_5.mp3" data-text="Put your book on the desk.">
+                  <div>
+                    <strong>Teacher:</strong> Put your book on the desk.
+                    <div style="font-size:0.8rem; color:var(--text-muted);">把你的书放在书桌上。</div>
+                  </div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          
+          <!-- Unit Original Full-Page Images Section -->
+          <div class="unit-pages-card" style="margin: 1.5rem 0; background: var(--card-bg, #ffffff); border-radius: 16px; padding: 1.25rem; box-shadow: 0 4px 20px rgba(0,0,0,0.04); border: 1px solid rgba(0,0,0,0.06);">
+            <div class="lesson-title" style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 1rem;">
+              <span style="font-weight: 700; font-size: 1.05rem; color: var(--text-main, #0f172a);">📖 原版全页课文 (Original Full-Page Pages P6-P13)</span>
+              <span style="font-size: 0.8rem; background: rgba(2, 132, 199, 0.1); color: #0284c7; padding: 0.25rem 0.65rem; border-radius: 12px; font-weight: 600;">点击图片直接在全页模式中浏览</span>
+            </div>
+            <div class="unit-page-gallery" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 0.85rem;">
+              <div class="page-thumb-card" onclick="jumpToPage(6)" title="点击跳转至第 6 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
+                <img src="images/pages/page_06.webp" alt="Page 6" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_06.webp'">
+                <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 6 页 📄</div>
+              </div>
+              <div class="page-thumb-card" onclick="jumpToPage(7)" title="点击跳转至第 7 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
+                <img src="images/pages/page_07.webp" alt="Page 7" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_07.webp'">
+                <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 7 页 📄</div>
+              </div>
+              <div class="page-thumb-card" onclick="jumpToPage(8)" title="点击跳转至第 8 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
+                <img src="images/pages/page_08.webp" alt="Page 8" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_08.webp'">
+                <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 8 页 📄</div>
+              </div>
+              <div class="page-thumb-card" onclick="jumpToPage(9)" title="点击跳转至第 9 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
+                <img src="images/pages/page_09.webp" alt="Page 9" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_09.webp'">
+                <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 9 页 📄</div>
+              </div>
+              <div class="page-thumb-card" onclick="jumpToPage(10)" title="点击跳转至第 10 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
+                <img src="images/pages/page_10.webp" alt="Page 10" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_10.webp'">
+                <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 10 页 📄</div>
+              </div>
+              <div class="page-thumb-card" onclick="jumpToPage(11)" title="点击跳转至第 11 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
+                <img src="images/pages/page_11.webp" alt="Page 11" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_11.webp'">
+                <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 11 页 📄</div>
+              </div>
+              <div class="page-thumb-card" onclick="jumpToPage(12)" title="点击跳转至第 12 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
+                <img src="images/pages/page_12.webp" alt="Page 12" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_12.webp'">
+                <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 12 页 📄</div>
+              </div>
+              <div class="page-thumb-card" onclick="jumpToPage(13)" title="点击跳转至第 13 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
+                <img src="images/pages/page_13.webp" alt="Page 13" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_13.webp'">
+                <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 13 页 📄</div>
+              </div>
+            </div>
+          </div>
+
+          <div id="quiz-unit-1" class="quiz-section"></div>
+
+          <div class="unit-bottom-nav">
+            <span class="unit-nav-btn prev-btn" style="opacity:0.4; cursor:not-allowed; pointer-events:none;">
+              <span class="nav-arrow">←</span>
+              <div class="nav-text">
+                <span class="nav-label">START OF COURSE</span>
+                <span class="nav-title">🏫 Unit 1 Classroom</span>
+              </div>
+            </span>
+            <div class="unit-nav-indicator">
+              <span>Unit 1 • P6-13</span>
+            </div>
+            <button type="button" class="unit-nav-btn next-btn" onclick="navigateToSection('unit-2')">
+              <div class="nav-text">
+                <span class="nav-label">NEXT UNIT</span>
+                <span class="nav-title">🛏️ Unit 2 Room</span>
+              </div>
+              <span class="nav-arrow">→</span>
+            </button>
+          </div>
+        </section>
+
+        <!-- SECTION: UNIT 2 ROOM -->
+        <section id="unit-2" class="unit-section view-pane" style="display:none;">
+          <div class="unit-header-card" style="background: linear-gradient(135deg, #7c3aed 0%, #2563eb 100%);">
+            <span class="unit-badge">Unit 2</span>
+            <h2 class="unit-title">Room (房间)</h2>
+            <p class="unit-desc">学习房间物品与相关方位词汇 (P14 - P21)</p>
+          </div>
+
+          <div class="lessons-grid">
+            <div class="lesson-card">
+              <div class="lesson-title">
+                <span>核心词汇 Vocabulary</span>
+                <span class="page-tag" onclick="jumpToPage(14)">P14 📄</span>
+              </div>
+              <div class="vocab-grid">
+                <div class="vocab-card audio-trigger" data-audio="audio/u2_light.mp3" data-text="light">
+                  <div class="vocab-word">light 🎵</div>
+                  <div class="vocab-phonetic">/laɪt/</div>
+                  <div class="vocab-meaning">灯</div>
+                </div>
+                <div class="vocab-card audio-trigger" data-audio="audio/u2_bed.mp3" data-text="bed">
+                  <div class="vocab-word">bed 🎵</div>
+                  <div class="vocab-phonetic">/bed/</div>
+                  <div class="vocab-meaning">床</div>
+                </div>
+                <div class="vocab-card audio-trigger" data-audio="audio/u2_door.mp3" data-text="door">
+                  <div class="vocab-word">door 🎵</div>
+                  <div class="vocab-phonetic">/dɔː/</div>
+                  <div class="vocab-meaning">门</div>
+                </div>
+                <div class="vocab-card audio-trigger" data-audio="audio/u2_box.mp3" data-text="box">
+                  <div class="vocab-word">box 🎵</div>
+                  <div class="vocab-phonetic">/bɒks/</div>
+                  <div class="vocab-meaning">盒子，箱子</div>
+                </div>
+                <div class="vocab-card audio-trigger" data-audio="audio/u2_near.mp3" data-text="near">
+                  <div class="vocab-word">near 🎵</div>
+                  <div class="vocab-phonetic">/nɪə/</div>
+                  <div class="vocab-meaning">在……附近</div>
+                </div>
+                <div class="vocab-card audio-trigger" data-audio="audio/u2_behind.mp3" data-text="behind">
+                  <div class="vocab-word">behind 🎵</div>
+                  <div class="vocab-phonetic">/bɪˈhaɪnd/</div>
+                  <div class="vocab-meaning">在……背后</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="lesson-card">
+              <div class="lesson-title">
+                <span>重点对话与句型 Dialogues</span>
+                <span class="page-tag" onclick="jumpToPage(15)">P15 📄</span>
+              </div>
+              <div class="dialogue-list">
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/u2_dlg_1.mp3" data-text="What's in your room?">
+                  <div>
+                    <strong>Yaoyao:</strong> What's in your room?
+                    <div style="font-size:0.8rem; color:var(--text-muted);">你的房间里有什么？</div>
+                  </div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/u2_dlg_2.mp3" data-text="A bed, a light and a desk.">
+                  <div>
+                    <strong>Joy:</strong> A bed, a light and a desk.
+                    <div style="font-size:0.8rem; color:var(--text-muted);">一张床、一盏灯和一张书桌。</div>
+                  </div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/u2_dlg_3.mp3" data-text="Where is the light?">
+                  <div>
+                    <strong>Bill:</strong> Where is the light?
+                    <div style="font-size:0.8rem; color:var(--text-muted);">灯在哪里？</div>
+                  </div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/u2_dlg_4.mp3" data-text="It's near the window.">
+                  <div>
+                    <strong>Andy:</strong> It's near the window.
+                    <div style="font-size:0.8rem; color:var(--text-muted);">它在窗户附近。</div>
+                  </div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/u2_dlg_6.mp3" data-text="It's behind the door.">
+                  <div>
+                    <strong>Lily:</strong> It's behind the door.
+                    <div style="font-size:0.8rem; color:var(--text-muted);">它在门后面。</div>
+                  </div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          
+          <!-- Unit Original Full-Page Images Section -->
+          <div class="unit-pages-card" style="margin: 1.5rem 0; background: var(--card-bg, #ffffff); border-radius: 16px; padding: 1.25rem; box-shadow: 0 4px 20px rgba(0,0,0,0.04); border: 1px solid rgba(0,0,0,0.06);">
+            <div class="lesson-title" style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 1rem;">
+              <span style="font-weight: 700; font-size: 1.05rem; color: var(--text-main, #0f172a);">📖 原版全页课文 (Original Full-Page Pages P14-P21)</span>
+              <span style="font-size: 0.8rem; background: rgba(2, 132, 199, 0.1); color: #0284c7; padding: 0.25rem 0.65rem; border-radius: 12px; font-weight: 600;">点击图片直接在全页模式中浏览</span>
+            </div>
+            <div class="unit-page-gallery" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 0.85rem;">
+              <div class="page-thumb-card" onclick="jumpToPage(14)" title="点击跳转至第 14 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
+                <img src="images/pages/page_14.webp" alt="Page 14" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_14.webp'">
+                <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 14 页 📄</div>
+              </div>
+              <div class="page-thumb-card" onclick="jumpToPage(15)" title="点击跳转至第 15 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
+                <img src="images/pages/page_15.webp" alt="Page 15" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_15.webp'">
+                <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 15 页 📄</div>
+              </div>
+              <div class="page-thumb-card" onclick="jumpToPage(16)" title="点击跳转至第 16 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
+                <img src="images/pages/page_16.webp" alt="Page 16" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_16.webp'">
+                <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 16 页 📄</div>
+              </div>
+              <div class="page-thumb-card" onclick="jumpToPage(17)" title="点击跳转至第 17 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
+                <img src="images/pages/page_17.webp" alt="Page 17" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_17.webp'">
+                <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 17 页 📄</div>
+              </div>
+              <div class="page-thumb-card" onclick="jumpToPage(18)" title="点击跳转至第 18 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
+                <img src="images/pages/page_18.webp" alt="Page 18" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_18.webp'">
+                <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 18 页 📄</div>
+              </div>
+              <div class="page-thumb-card" onclick="jumpToPage(19)" title="点击跳转至第 19 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
+                <img src="images/pages/page_19.webp" alt="Page 19" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_19.webp'">
+                <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 19 页 📄</div>
+              </div>
+              <div class="page-thumb-card" onclick="jumpToPage(20)" title="点击跳转至第 20 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
+                <img src="images/pages/page_20.webp" alt="Page 20" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_20.webp'">
+                <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 20 页 📄</div>
+              </div>
+              <div class="page-thumb-card" onclick="jumpToPage(21)" title="点击跳转至第 21 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
+                <img src="images/pages/page_21.webp" alt="Page 21" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_21.webp'">
+                <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 21 页 📄</div>
+              </div>
+            </div>
+          </div>
+
+          <div id="quiz-unit-2" class="quiz-section"></div>
+
+          <div class="unit-bottom-nav">
+            <button type="button" class="unit-nav-btn prev-btn" onclick="navigateToSection('unit-1')">
+              <span class="nav-arrow">←</span>
+              <div class="nav-text">
+                <span class="nav-label">PREVIOUS UNIT</span>
+                <span class="nav-title">🏫 Unit 1 Classroom</span>
+              </div>
+            </button>
+            <div class="unit-nav-indicator">
+              <span>Unit 2 • P14-21</span>
+            </div>
+            <button type="button" class="unit-nav-btn next-btn" onclick="navigateToSection('unit-3')">
+              <div class="nav-text">
+                <span class="nav-label">NEXT UNIT</span>
+                <span class="nav-title">🧸 Unit 3 Toys</span>
+              </div>
+              <span class="nav-arrow">→</span>
+            </button>
+          </div>
+        </section>
+
+        <!-- SECTION: UNIT 3 TOYS -->
+        <section id="unit-3" class="unit-section view-pane" style="display:none;">
+          <div class="unit-header-card" style="background: linear-gradient(135deg, #d97706 0%, #dc2626 100%);">
+            <span class="unit-badge">Unit 3</span>
+            <h2 class="unit-title">Toys (玩具)</h2>
+            <p class="unit-desc">学习各种玩具词汇及表达想要和赠送玩具句型 (P22 - P29)</p>
+          </div>
+
+          <div class="lessons-grid">
+            <div class="lesson-card">
+              <div class="lesson-title">
+                <span>核心词汇 Vocabulary</span>
+                <span class="page-tag" onclick="jumpToPage(22)">P22 📄</span>
+              </div>
+              <div class="vocab-grid">
+                <div class="vocab-card audio-trigger" data-audio="audio/u3_plane.mp3" data-text="plane">
+                  <div class="vocab-word">plane 🎵</div>
+                  <div class="vocab-phonetic">/pleɪn/</div>
+                  <div class="vocab-meaning">飞机</div>
+                </div>
+                <div class="vocab-card audio-trigger" data-audio="audio/u3_ball.mp3" data-text="ball">
+                  <div class="vocab-word">ball 🎵</div>
+                  <div class="vocab-phonetic">/bɔːl/</div>
+                  <div class="vocab-meaning">球</div>
+                </div>
+                <div class="vocab-card audio-trigger" data-audio="audio/u3_doll.mp3" data-text="doll">
+                  <div class="vocab-word">doll 🎵</div>
+                  <div class="vocab-phonetic">/dɒl/</div>
+                  <div class="vocab-meaning">玩偶，娃娃</div>
+                </div>
+                <div class="vocab-card audio-trigger" data-audio="audio/u3_train.mp3" data-text="train">
+                  <div class="vocab-word">train 🎵</div>
+                  <div class="vocab-phonetic">/treɪn/</div>
+                  <div class="vocab-meaning">火车</div>
+                </div>
+                <div class="vocab-card audio-trigger" data-audio="audio/u3_car.mp3" data-text="car">
+                  <div class="vocab-word">car 🎵</div>
+                  <div class="vocab-phonetic">/kɑː/</div>
+                  <div class="vocab-meaning">小汽车</div>
+                </div>
+                <div class="vocab-card audio-trigger" data-audio="audio/u3_bear.mp3" data-text="bear">
+                  <div class="vocab-word">bear 🎵</div>
+                  <div class="vocab-phonetic">/beə/</div>
+                  <div class="vocab-meaning">玩具熊</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="lesson-card">
+              <div class="lesson-title">
+                <span>重点对话与句型 Dialogues</span>
+                <span class="page-tag" onclick="jumpToPage(23)">P23 📄</span>
+              </div>
+              <div class="dialogue-list">
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/u3_dlg_1.mp3" data-text="Can I have a car?">
+                  <div>
+                    <strong>Joy:</strong> Can I have a car?
+                    <div style="font-size:0.8rem; color:var(--text-muted);">我可以要辆小汽车吗？</div>
+                  </div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/u3_dlg_2.mp3" data-text="Sure. Here you are.">
+                  <div>
+                    <strong>Bill:</strong> Sure. Here you are.
+                    <div style="font-size:0.8rem; color:var(--text-muted);">当然可以。给你。</div>
+                  </div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/u3_dlg_3.mp3" data-text="Can I have a plane?">
+                  <div>
+                    <strong>Yaoyao:</strong> Can I have a plane?
+                    <div style="font-size:0.8rem; color:var(--text-muted);">我可以要架飞机吗？</div>
+                  </div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/u3_dlg_4.mp3" data-text="Sorry, no.">
+                  <div>
+                    <strong>Andy:</strong> Sorry, no.
+                    <div style="font-size:0.8rem; color:var(--text-muted);">对不起，不行。</div>
+                  </div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/u3_dlg_5.mp3" data-text="I have a bear.">
+                  <div>
+                    <strong>Lily:</strong> I have a bear.
+                    <div style="font-size:0.8rem; color:var(--text-muted);">我有一只玩具熊。</div>
+                  </div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          
+          <!-- Unit Original Full-Page Images Section -->
+          <div class="unit-pages-card" style="margin: 1.5rem 0; background: var(--card-bg, #ffffff); border-radius: 16px; padding: 1.25rem; box-shadow: 0 4px 20px rgba(0,0,0,0.04); border: 1px solid rgba(0,0,0,0.06);">
+            <div class="lesson-title" style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 1rem;">
+              <span style="font-weight: 700; font-size: 1.05rem; color: var(--text-main, #0f172a);">📖 原版全页课文 (Original Full-Page Pages P22-P29)</span>
+              <span style="font-size: 0.8rem; background: rgba(2, 132, 199, 0.1); color: #0284c7; padding: 0.25rem 0.65rem; border-radius: 12px; font-weight: 600;">点击图片直接在全页模式中浏览</span>
+            </div>
+            <div class="unit-page-gallery" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 0.85rem;">
+              <div class="page-thumb-card" onclick="jumpToPage(22)" title="点击跳转至第 22 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
+                <img src="images/pages/page_22.webp" alt="Page 22" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_22.webp'">
+                <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 22 页 📄</div>
+              </div>
+              <div class="page-thumb-card" onclick="jumpToPage(23)" title="点击跳转至第 23 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
+                <img src="images/pages/page_23.webp" alt="Page 23" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_23.webp'">
+                <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 23 页 📄</div>
+              </div>
+              <div class="page-thumb-card" onclick="jumpToPage(24)" title="点击跳转至第 24 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
+                <img src="images/pages/page_24.webp" alt="Page 24" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_24.webp'">
+                <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 24 页 📄</div>
+              </div>
+              <div class="page-thumb-card" onclick="jumpToPage(25)" title="点击跳转至第 25 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
+                <img src="images/pages/page_25.webp" alt="Page 25" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_25.webp'">
+                <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 25 页 📄</div>
+              </div>
+              <div class="page-thumb-card" onclick="jumpToPage(26)" title="点击跳转至第 26 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
+                <img src="images/pages/page_26.webp" alt="Page 26" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_26.webp'">
+                <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 26 页 📄</div>
+              </div>
+              <div class="page-thumb-card" onclick="jumpToPage(27)" title="点击跳转至第 27 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
+                <img src="images/pages/page_27.webp" alt="Page 27" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_27.webp'">
+                <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 27 页 📄</div>
+              </div>
+              <div class="page-thumb-card" onclick="jumpToPage(28)" title="点击跳转至第 28 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
+                <img src="images/pages/page_28.webp" alt="Page 28" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_28.webp'">
+                <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 28 页 📄</div>
+              </div>
+              <div class="page-thumb-card" onclick="jumpToPage(29)" title="点击跳转至第 29 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
+                <img src="images/pages/page_29.webp" alt="Page 29" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_29.webp'">
+                <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 29 页 📄</div>
+              </div>
+            </div>
+          </div>
+
+          <div id="quiz-unit-3" class="quiz-section"></div>
+
+          <div class="unit-bottom-nav">
+            <button type="button" class="unit-nav-btn prev-btn" onclick="navigateToSection('unit-2')">
+              <span class="nav-arrow">←</span>
+              <div class="nav-text">
+                <span class="nav-label">PREVIOUS UNIT</span>
+                <span class="nav-title">🛏️ Unit 2 Room</span>
+              </div>
+            </button>
+            <div class="unit-nav-indicator">
+              <span>Unit 3 • P22-29</span>
+            </div>
+            <button type="button" class="unit-nav-btn next-btn" onclick="navigateToSection('revision-1')">
+              <div class="nav-text">
+                <span class="nav-label">NEXT REVISION</span>
+                <span class="nav-title">🎲 Revision 1</span>
+              </div>
+              <span class="nav-arrow">→</span>
+            </button>
+          </div>
+        </section>
+
+        <!-- SECTION: REVISION 1 -->
+        <section id="revision-1" class="unit-section view-pane" style="display:none;">
+          <div class="unit-header-card" style="background: linear-gradient(135deg, #4f46e5 0%, #9333ea 100%);">
+            <span class="unit-badge">Revision 1</span>
+            <h2 class="unit-title">Revision 1 (阶段复习一)</h2>
+            <p class="unit-desc">综合复习 Units 1 - 3 词汇与句型 (P30 - P31)</p>
+          </div>
+          <div class="lessons-grid">
+            <div class="lesson-card">
+              <div class="lesson-title"><span>复习知识要点 Review Focus</span><span class="page-tag" onclick="jumpToPage(30)">P30 📄</span></div>
+              <p style="color:var(--text-muted);">1. 教室与房间物品: chair, desk, blackboard, light, bed, door, box</p>
+              <p style="color:var(--text-muted); margin-top:0.5rem;">2. 方位介词: on, under, in, near, behind</p>
+              <p style="color:var(--text-muted); margin-top:0.5rem;">3. 玩具与提问句型: plane, ball, doll, train, car, bear ("Can I have a...?")</p>
+            </div>
+          </div>
+          
+          <!-- Unit Original Full-Page Images Section -->
+          <div class="unit-pages-card" style="margin: 1.5rem 0; background: var(--card-bg, #ffffff); border-radius: 16px; padding: 1.25rem; box-shadow: 0 4px 20px rgba(0,0,0,0.04); border: 1px solid rgba(0,0,0,0.06);">
+            <div class="lesson-title" style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 1rem;">
+              <span style="font-weight: 700; font-size: 1.05rem; color: var(--text-main, #0f172a);">📖 原版全页课文 (Original Full-Page Pages P30-P31)</span>
+              <span style="font-size: 0.8rem; background: rgba(2, 132, 199, 0.1); color: #0284c7; padding: 0.25rem 0.65rem; border-radius: 12px; font-weight: 600;">点击图片直接在全页模式中浏览</span>
+            </div>
+            <div class="unit-page-gallery" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 0.85rem;">
+              <div class="page-thumb-card" onclick="jumpToPage(30)" title="点击跳转至第 30 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
+                <img src="images/pages/page_30.webp" alt="Page 30" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_30.webp'">
+                <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 30 页 📄</div>
+              </div>
+              <div class="page-thumb-card" onclick="jumpToPage(31)" title="点击跳转至第 31 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
+                <img src="images/pages/page_31.webp" alt="Page 31" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_31.webp'">
+                <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 31 页 📄</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="unit-bottom-nav">
+            <button type="button" class="unit-nav-btn prev-btn" onclick="navigateToSection('unit-3')">
+              <span class="nav-arrow">←</span>
+              <div class="nav-text"><span class="nav-label">PREVIOUS UNIT</span><span class="nav-title">🧸 Unit 3 Toys</span></div>
+            </button>
+            <button type="button" class="unit-nav-btn next-btn" onclick="navigateToSection('unit-4')">
+              <div class="nav-text"><span class="nav-label">NEXT UNIT</span><span class="nav-title">🍚 Unit 4 Food</span></div>
+              <span class="nav-arrow">→</span>
+            </button>
+          </div>
+        </section>
+
+        <!-- SECTION: UNIT 4 FOOD -->
+        <section id="unit-4" class="unit-section view-pane" style="display:none;">
+          <div class="unit-header-card" style="background: linear-gradient(135deg, #059669 0%, #10b981 100%);">
+            <span class="unit-badge">Unit 4</span>
+            <h2 class="unit-title">Food (食物)</h2>
+            <p class="unit-desc">学习常见食物词汇及表达饥饿与用餐意愿 (P32 - P39)</p>
+          </div>
+
+          <div class="lessons-grid">
+            <div class="lesson-card">
+              <div class="lesson-title">
+                <span>核心词汇 Vocabulary</span>
+                <span class="page-tag" onclick="jumpToPage(32)">P32 📄</span>
+              </div>
+              <div class="vocab-grid">
+                <div class="vocab-card audio-trigger" data-audio="audio/u4_rice.mp3" data-text="rice">
+                  <div class="vocab-word">rice 🎵</div>
+                  <div class="vocab-phonetic">/raɪs/</div>
+                  <div class="vocab-meaning">米饭</div>
+                </div>
+                <div class="vocab-card audio-trigger" data-audio="audio/u4_noodles.mp3" data-text="noodles">
+                  <div class="vocab-word">noodles 🎵</div>
+                  <div class="vocab-phonetic">/ˈnuːdlz/</div>
+                  <div class="vocab-meaning">面条</div>
+                </div>
+                <div class="vocab-card audio-trigger" data-audio="audio/u4_vegetable.mp3" data-text="vegetable">
+                  <div class="vocab-word">vegetable 🎵</div>
+                  <div class="vocab-phonetic">/ˈvedʒtəbl/</div>
+                  <div class="vocab-meaning">蔬菜</div>
+                </div>
+                <div class="vocab-card audio-trigger" data-audio="audio/u4_fish.mp3" data-text="fish">
+                  <div class="vocab-word">fish 🎵</div>
+                  <div class="vocab-phonetic">/fɪʃ/</div>
+                  <div class="vocab-meaning">鱼</div>
+                </div>
+                <div class="vocab-card audio-trigger" data-audio="audio/u4_chicken.mp3" data-text="chicken">
+                  <div class="vocab-word">chicken 🎵</div>
+                  <div class="vocab-phonetic">/ˈtʃɪkɪn/</div>
+                  <div class="vocab-meaning">鸡肉</div>
+                </div>
+                <div class="vocab-card audio-trigger" data-audio="audio/u4_egg.mp3" data-text="egg">
+                  <div class="vocab-word">egg 🎵</div>
+                  <div class="vocab-phonetic">/eɡ/</div>
+                  <div class="vocab-meaning">鸡蛋</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="lesson-card">
+              <div class="lesson-title">
+                <span>重点对话与句型 Dialogues</span>
+                <span class="page-tag" onclick="jumpToPage(33)">P33 📄</span>
+              </div>
+              <div class="dialogue-list">
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/u4_dlg_1.mp3" data-text="I'm hungry.">
+                  <div>
+                    <strong>Andy:</strong> I'm hungry.
+                    <div style="font-size:0.8rem; color:var(--text-muted);">我饿了。</div>
+                  </div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/u4_dlg_2.mp3" data-text="I want rice and chicken.">
+                  <div>
+                    <strong>Binbin:</strong> I want rice and chicken.
+                    <div style="font-size:0.8rem; color:var(--text-muted);">我想吃米饭和鸡肉。</div>
+                  </div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/u4_dlg_3.mp3" data-text="What do you want?">
+                  <div>
+                    <strong>Joy:</strong> What do you want?
+                    <div style="font-size:0.8rem; color:var(--text-muted);">你想要吃什么？</div>
+                  </div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/u4_dlg_4.mp3" data-text="I want noodles.">
+                  <div>
+                    <strong>Lily:</strong> I want noodles.
+                    <div style="font-size:0.8rem; color:var(--text-muted);">我想要面条。</div>
+                  </div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/u4_dlg_5.mp3" data-text="Do you like fish?">
+                  <div>
+                    <strong>Bill:</strong> Do you like fish?
+                    <div style="font-size:0.8rem; color:var(--text-muted);">你喜欢鱼肉吗？</div>
+                  </div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/u4_dlg_6.mp3" data-text="Yes, I do.">
+                  <div>
+                    <strong>Yaoyao:</strong> Yes, I do.
+                    <div style="font-size:0.8rem; color:var(--text-muted);">是的，我喜欢。</div>
+                  </div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          
+          <!-- Unit Original Full-Page Images Section -->
+          <div class="unit-pages-card" style="margin: 1.5rem 0; background: var(--card-bg, #ffffff); border-radius: 16px; padding: 1.25rem; box-shadow: 0 4px 20px rgba(0,0,0,0.04); border: 1px solid rgba(0,0,0,0.06);">
+            <div class="lesson-title" style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 1rem;">
+              <span style="font-weight: 700; font-size: 1.05rem; color: var(--text-main, #0f172a);">📖 原版全页课文 (Original Full-Page Pages P32-P39)</span>
+              <span style="font-size: 0.8rem; background: rgba(2, 132, 199, 0.1); color: #0284c7; padding: 0.25rem 0.65rem; border-radius: 12px; font-weight: 600;">点击图片直接在全页模式中浏览</span>
+            </div>
+            <div class="unit-page-gallery" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 0.85rem;">
+              <div class="page-thumb-card" onclick="jumpToPage(32)" title="点击跳转至第 32 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
+                <img src="images/pages/page_32.webp" alt="Page 32" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_32.webp'">
+                <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 32 页 📄</div>
+              </div>
+              <div class="page-thumb-card" onclick="jumpToPage(33)" title="点击跳转至第 33 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
+                <img src="images/pages/page_33.webp" alt="Page 33" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_33.webp'">
+                <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 33 页 📄</div>
+              </div>
+              <div class="page-thumb-card" onclick="jumpToPage(34)" title="点击跳转至第 34 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
+                <img src="images/pages/page_34.webp" alt="Page 34" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_34.webp'">
+                <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 34 页 📄</div>
+              </div>
+              <div class="page-thumb-card" onclick="jumpToPage(35)" title="点击跳转至第 35 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
+                <img src="images/pages/page_35.webp" alt="Page 35" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_35.webp'">
+                <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 35 页 📄</div>
+              </div>
+              <div class="page-thumb-card" onclick="jumpToPage(36)" title="点击跳转至第 36 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
+                <img src="images/pages/page_36.webp" alt="Page 36" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_36.webp'">
+                <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 36 页 📄</div>
+              </div>
+              <div class="page-thumb-card" onclick="jumpToPage(37)" title="点击跳转至第 37 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
+                <img src="images/pages/page_37.webp" alt="Page 37" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_37.webp'">
+                <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 37 页 📄</div>
+              </div>
+              <div class="page-thumb-card" onclick="jumpToPage(38)" title="点击跳转至第 38 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
+                <img src="images/pages/page_38.webp" alt="Page 38" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_38.webp'">
+                <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 38 页 📄</div>
+              </div>
+              <div class="page-thumb-card" onclick="jumpToPage(39)" title="点击跳转至第 39 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
+                <img src="images/pages/page_39.webp" alt="Page 39" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_39.webp'">
+                <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 39 页 📄</div>
+              </div>
+            </div>
+          </div>
+
+          <div id="quiz-unit-4" class="quiz-section"></div>
+
+          <div class="unit-bottom-nav">
+            <button type="button" class="unit-nav-btn prev-btn" onclick="navigateToSection('revision-1')">
+              <span class="nav-arrow">←</span>
+              <div class="nav-text"><span class="nav-label">PREVIOUS</span><span class="nav-title">🎲 Revision 1</span></div>
+            </button>
+            <div class="unit-nav-indicator"><span>Unit 4 • P32-39</span></div>
+            <button type="button" class="unit-nav-btn next-btn" onclick="navigateToSection('unit-5')">
+              <div class="nav-text"><span class="nav-label">NEXT UNIT</span><span class="nav-title">🧃 Unit 5 Drink</span></div>
+              <span class="nav-arrow">→</span>
+            </button>
+          </div>
+        </section>
+
+        <!-- SECTION: UNIT 5 DRINK -->
+        <section id="unit-5" class="unit-section view-pane" style="display:none;">
+          <div class="unit-header-card" style="background: linear-gradient(135deg, #0284c7 0%, #6366f1 100%);">
+            <span class="unit-badge">Unit 5</span>
+            <h2 class="unit-title">Drink (饮料)</h2>
+            <p class="unit-desc">学习饮品名称及表达口渴与喝水句型 (P40 - P47)</p>
+          </div>
+
+          <div class="lessons-grid">
+            <div class="lesson-card">
+              <div class="lesson-title">
+                <span>核心词汇 Vocabulary</span>
+                <span class="page-tag" onclick="jumpToPage(40)">P40 📄</span>
+              </div>
+              <div class="vocab-grid">
+                <div class="vocab-card audio-trigger" data-audio="audio/u5_juice.mp3" data-text="juice">
+                  <div class="vocab-word">juice 🎵</div>
+                  <div class="vocab-phonetic">/dʒuːs/</div>
+                  <div class="vocab-meaning">果汁</div>
+                </div>
+                <div class="vocab-card audio-trigger" data-audio="audio/u5_tea.mp3" data-text="tea">
+                  <div class="vocab-word">tea 🎵</div>
+                  <div class="vocab-phonetic">/tiː/</div>
+                  <div class="vocab-meaning">茶</div>
+                </div>
+                <div class="vocab-card audio-trigger" data-audio="audio/u5_milk.mp3" data-text="milk">
+                  <div class="vocab-word">milk 🎵</div>
+                  <div class="vocab-phonetic">/mɪlk/</div>
+                  <div class="vocab-meaning">牛奶</div>
+                </div>
+                <div class="vocab-card audio-trigger" data-audio="audio/u5_water.mp3" data-text="water">
+                  <div class="vocab-word">water 🎵</div>
+                  <div class="vocab-phonetic">/ˈwɔːtə/</div>
+                  <div class="vocab-meaning">水</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="lesson-card">
+              <div class="lesson-title">
+                <span>重点对话与句型 Dialogues</span>
+                <span class="page-tag" onclick="jumpToPage(41)">P41 📄</span>
+              </div>
+              <div class="dialogue-list">
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/u5_dlg_1.mp3" data-text="I'm thirsty.">
+                  <div>
+                    <strong>Binbin:</strong> I'm thirsty.
+                    <div style="font-size:0.8rem; color:var(--text-muted);">我口渴了。</div>
+                  </div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/u5_dlg_2.mp3" data-text="I want water.">
+                  <div>
+                    <strong>Andy:</strong> I want water.
+                    <div style="font-size:0.8rem; color:var(--text-muted);">我想喝水。</div>
+                  </div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/u5_dlg_3.mp3" data-text="Can I have some milk?">
+                  <div>
+                    <strong>Lily:</strong> Can I have some milk?
+                    <div style="font-size:0.8rem; color:var(--text-muted);">我可以喝点牛奶吗？</div>
+                  </div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/u5_dlg_4.mp3" data-text="Here you are.">
+                  <div>
+                    <strong>Joy:</strong> Here you are.
+                    <div style="font-size:0.8rem; color:var(--text-muted);">给你。</div>
+                  </div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/u5_dlg_5.mp3" data-text="Thanks.">
+                  <div>
+                    <strong>Lily:</strong> Thanks.
+                    <div style="font-size:0.8rem; color:var(--text-muted);">谢谢。</div>
+                  </div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          
+          <!-- Unit Original Full-Page Images Section -->
+          <div class="unit-pages-card" style="margin: 1.5rem 0; background: var(--card-bg, #ffffff); border-radius: 16px; padding: 1.25rem; box-shadow: 0 4px 20px rgba(0,0,0,0.04); border: 1px solid rgba(0,0,0,0.06);">
+            <div class="lesson-title" style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 1rem;">
+              <span style="font-weight: 700; font-size: 1.05rem; color: var(--text-main, #0f172a);">📖 原版全页课文 (Original Full-Page Pages P40-P47)</span>
+              <span style="font-size: 0.8rem; background: rgba(2, 132, 199, 0.1); color: #0284c7; padding: 0.25rem 0.65rem; border-radius: 12px; font-weight: 600;">点击图片直接在全页模式中浏览</span>
+            </div>
+            <div class="unit-page-gallery" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 0.85rem;">
+              <div class="page-thumb-card" onclick="jumpToPage(40)" title="点击跳转至第 40 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
+                <img src="images/pages/page_40.webp" alt="Page 40" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_40.webp'">
+                <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 40 页 📄</div>
+              </div>
+              <div class="page-thumb-card" onclick="jumpToPage(41)" title="点击跳转至第 41 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
+                <img src="images/pages/page_41.webp" alt="Page 41" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_41.webp'">
+                <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 41 页 📄</div>
+              </div>
+              <div class="page-thumb-card" onclick="jumpToPage(42)" title="点击跳转至第 42 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
+                <img src="images/pages/page_42.webp" alt="Page 42" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_42.webp'">
+                <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 42 页 📄</div>
+              </div>
+              <div class="page-thumb-card" onclick="jumpToPage(43)" title="点击跳转至第 43 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
+                <img src="images/pages/page_43.webp" alt="Page 43" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_43.webp'">
+                <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 43 页 📄</div>
+              </div>
+              <div class="page-thumb-card" onclick="jumpToPage(44)" title="点击跳转至第 44 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
+                <img src="images/pages/page_44.webp" alt="Page 44" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_44.webp'">
+                <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 44 页 📄</div>
+              </div>
+              <div class="page-thumb-card" onclick="jumpToPage(45)" title="点击跳转至第 45 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
+                <img src="images/pages/page_45.webp" alt="Page 45" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_45.webp'">
+                <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 45 页 📄</div>
+              </div>
+              <div class="page-thumb-card" onclick="jumpToPage(46)" title="点击跳转至第 46 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
+                <img src="images/pages/page_46.webp" alt="Page 46" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_46.webp'">
+                <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 46 页 📄</div>
+              </div>
+              <div class="page-thumb-card" onclick="jumpToPage(47)" title="点击跳转至第 47 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
+                <img src="images/pages/page_47.webp" alt="Page 47" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_47.webp'">
+                <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 47 页 📄</div>
+              </div>
+            </div>
+          </div>
+
+          <div id="quiz-unit-5" class="quiz-section"></div>
+
+          <div class="unit-bottom-nav">
+            <button type="button" class="unit-nav-btn prev-btn" onclick="navigateToSection('unit-4')">
+              <span class="nav-arrow">←</span>
+              <div class="nav-text"><span class="nav-label">PREVIOUS</span><span class="nav-title">🍚 Unit 4 Food</span></div>
+            </button>
+            <div class="unit-nav-indicator"><span>Unit 5 • P40-47</span></div>
+            <button type="button" class="unit-nav-btn next-btn" onclick="navigateToSection('unit-6')">
+              <div class="nav-text"><span class="nav-label">NEXT UNIT</span><span class="nav-title">👔 Unit 6 Clothes</span></div>
+              <span class="nav-arrow">→</span>
+            </button>
+          </div>
+        </section>
+
+        <!-- SECTION: UNIT 6 CLOTHES -->
+        <section id="unit-6" class="unit-section view-pane" style="display:none;">
+          <div class="unit-header-card" style="background: linear-gradient(135deg, #ec4899 0%, #8b5cf6 100%);">
+            <span class="unit-badge">Unit 6</span>
+            <h2 class="unit-title">Clothes (服装)</h2>
+            <p class="unit-desc">学习服装词汇及穿脱指令与表达称赞句型 (P48 - P55)</p>
+          </div>
+
+          <div class="lessons-grid">
+            <div class="lesson-card">
+              <div class="lesson-title">
+                <span>核心词汇 Vocabulary</span>
+                <span class="page-tag" onclick="jumpToPage(48)">P48 📄</span>
+              </div>
+              <div class="vocab-grid">
+                <div class="vocab-card audio-trigger" data-audio="audio/u6_shirt.mp3" data-text="shirt">
+                  <div class="vocab-word">shirt 🎵</div>
+                  <div class="vocab-phonetic">/ʃɜːt/</div>
+                  <div class="vocab-meaning">衬衫</div>
+                </div>
+                <div class="vocab-card audio-trigger" data-audio="audio/u6_tshirt.mp3" data-text="T-shirt">
+                  <div class="vocab-word">T-shirt 🎵</div>
+                  <div class="vocab-phonetic">/ˈtiː ʃɜːt/</div>
+                  <div class="vocab-meaning">T恤衫</div>
+                </div>
+                <div class="vocab-card audio-trigger" data-audio="audio/u6_skirt.mp3" data-text="skirt">
+                  <div class="vocab-word">skirt 🎵</div>
+                  <div class="vocab-phonetic">/skɜːt/</div>
+                  <div class="vocab-meaning">裙子</div>
+                </div>
+                <div class="vocab-card audio-trigger" data-audio="audio/u6_dress.mp3" data-text="dress">
+                  <div class="vocab-word">dress 🎵</div>
+                  <div class="vocab-phonetic">/dres/</div>
+                  <div class="vocab-meaning">连衣裙</div>
+                </div>
+                <div class="vocab-card audio-trigger" data-audio="audio/u6_socks.mp3" data-text="socks">
+                  <div class="vocab-word">socks 🎵</div>
+                  <div class="vocab-phonetic">/sɒks/</div>
+                  <div class="vocab-meaning">短袜</div>
+                </div>
+                <div class="vocab-card audio-trigger" data-audio="audio/u6_shorts.mp3" data-text="shorts">
+                  <div class="vocab-word">shorts 🎵</div>
+                  <div class="vocab-phonetic">/ʃɔːts/</div>
+                  <div class="vocab-meaning">短裤</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="lesson-card">
+              <div class="lesson-title">
+                <span>重点对话与句型 Dialogues</span>
+                <span class="page-tag" onclick="jumpToPage(49)">P49 📄</span>
+              </div>
+              <div class="dialogue-list">
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/u6_dlg_1.mp3" data-text="Put on your shirt.">
+                  <div>
+                    <strong>Teacher:</strong> Put on your shirt.
+                    <div style="font-size:0.8rem; color:var(--text-muted);">穿上你的衬衫。</div>
+                  </div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/u6_dlg_2.mp3" data-text="Take off your socks.">
+                  <div>
+                    <strong>Bill:</strong> Take off your socks.
+                    <div style="font-size:0.8rem; color:var(--text-muted);">脱下你的短袜。</div>
+                  </div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/u6_dlg_3.mp3" data-text="I like your dress.">
+                  <div>
+                    <strong>Joy:</strong> I like your dress.
+                    <div style="font-size:0.8rem; color:var(--text-muted);">我喜欢你的连衣裙。</div>
+                  </div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/u6_dlg_4.mp3" data-text="Thank you.">
+                  <div>
+                    <strong>Yaoyao:</strong> Thank you.
+                    <div style="font-size:0.8rem; color:var(--text-muted);">谢谢你。</div>
+                  </div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/u6_dlg_5.mp3" data-text="Is this your T-shirt?">
+                  <div>
+                    <strong>Andy:</strong> Is this your T-shirt?
+                    <div style="font-size:0.8rem; color:var(--text-muted);">这是你的T恤衫吗？</div>
+                  </div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/u6_dlg_6.mp3" data-text="Yes, it is.">
+                  <div>
+                    <strong>Binbin:</strong> Yes, it is.
+                    <div style="font-size:0.8rem; color:var(--text-muted);">是的，它是。</div>
+                  </div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          
+          <!-- Unit Original Full-Page Images Section -->
+          <div class="unit-pages-card" style="margin: 1.5rem 0; background: var(--card-bg, #ffffff); border-radius: 16px; padding: 1.25rem; box-shadow: 0 4px 20px rgba(0,0,0,0.04); border: 1px solid rgba(0,0,0,0.06);">
+            <div class="lesson-title" style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 1rem;">
+              <span style="font-weight: 700; font-size: 1.05rem; color: var(--text-main, #0f172a);">📖 原版全页课文 (Original Full-Page Pages P48-P55)</span>
+              <span style="font-size: 0.8rem; background: rgba(2, 132, 199, 0.1); color: #0284c7; padding: 0.25rem 0.65rem; border-radius: 12px; font-weight: 600;">点击图片直接在全页模式中浏览</span>
+            </div>
+            <div class="unit-page-gallery" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 0.85rem;">
+              <div class="page-thumb-card" onclick="jumpToPage(48)" title="点击跳转至第 48 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
+                <img src="images/pages/page_48.webp" alt="Page 48" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_48.webp'">
+                <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 48 页 📄</div>
+              </div>
+              <div class="page-thumb-card" onclick="jumpToPage(49)" title="点击跳转至第 49 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
+                <img src="images/pages/page_49.webp" alt="Page 49" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_49.webp'">
+                <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 49 页 📄</div>
+              </div>
+              <div class="page-thumb-card" onclick="jumpToPage(50)" title="点击跳转至第 50 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
+                <img src="images/pages/page_50.webp" alt="Page 50" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_50.webp'">
+                <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 50 页 📄</div>
+              </div>
+              <div class="page-thumb-card" onclick="jumpToPage(51)" title="点击跳转至第 51 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
+                <img src="images/pages/page_51.webp" alt="Page 51" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_51.webp'">
+                <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 51 页 📄</div>
+              </div>
+              <div class="page-thumb-card" onclick="jumpToPage(52)" title="点击跳转至第 52 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
+                <img src="images/pages/page_52.webp" alt="Page 52" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_52.webp'">
+                <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 52 页 📄</div>
+              </div>
+              <div class="page-thumb-card" onclick="jumpToPage(53)" title="点击跳转至第 53 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
+                <img src="images/pages/page_53.webp" alt="Page 53" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_53.webp'">
+                <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 53 页 📄</div>
+              </div>
+              <div class="page-thumb-card" onclick="jumpToPage(54)" title="点击跳转至第 54 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
+                <img src="images/pages/page_54.webp" alt="Page 54" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_54.webp'">
+                <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 54 页 📄</div>
+              </div>
+              <div class="page-thumb-card" onclick="jumpToPage(55)" title="点击跳转至第 55 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
+                <img src="images/pages/page_55.webp" alt="Page 55" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_55.webp'">
+                <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 55 页 📄</div>
+              </div>
+            </div>
+          </div>
+
+          <div id="quiz-unit-6" class="quiz-section"></div>
+
+          <div class="unit-bottom-nav">
+            <button type="button" class="unit-nav-btn prev-btn" onclick="navigateToSection('unit-5')">
+              <span class="nav-arrow">←</span>
+              <div class="nav-text"><span class="nav-label">PREVIOUS</span><span class="nav-title">🧃 Unit 5 Drink</span></div>
+            </button>
+            <div class="unit-nav-indicator"><span>Unit 6 • P48-55</span></div>
+            <button type="button" class="unit-nav-btn next-btn" onclick="navigateToSection('revision-2')">
+              <div class="nav-text"><span class="nav-label">NEXT REVISION</span><span class="nav-title">🎲 Revision 2</span></div>
+              <span class="nav-arrow">→</span>
+            </button>
+          </div>
+        </section>
+
+        <!-- SECTION: REVISION 2 -->
+        <section id="revision-2" class="unit-section view-pane" style="display:none;">
+          <div class="unit-header-card" style="background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);">
+            <span class="unit-badge">Revision 2</span>
+            <h2 class="unit-title">Revision 2 (阶段复习二)</h2>
+            <p class="unit-desc">综合复习 Units 4 - 6 词汇与句型 (P56 - P57)</p>
+          </div>
+          <div class="lessons-grid">
+            <div class="lesson-card">
+              <div class="lesson-title"><span>复习知识要点 Review Focus</span><span class="page-tag" onclick="jumpToPage(56)">P56 📄</span></div>
+              <p style="color:var(--text-muted);">1. 食物与饮料: rice, noodles, vegetable, fish, chicken, egg, juice, tea, milk, water</p>
+              <p style="color:var(--text-muted); margin-top:0.5rem;">2. 服装词汇: shirt, T-shirt, skirt, dress, socks, shorts</p>
+              <p style="color:var(--text-muted); margin-top:0.5rem;">3. 常用句型: "I'm hungry/thirsty.", "I want...", "Put on / Take off your..."</p>
+            </div>
+          </div>
+          
+          <!-- Unit Original Full-Page Images Section -->
+          <div class="unit-pages-card" style="margin: 1.5rem 0; background: var(--card-bg, #ffffff); border-radius: 16px; padding: 1.25rem; box-shadow: 0 4px 20px rgba(0,0,0,0.04); border: 1px solid rgba(0,0,0,0.06);">
+            <div class="lesson-title" style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 1rem;">
+              <span style="font-weight: 700; font-size: 1.05rem; color: var(--text-main, #0f172a);">📖 原版全页课文 (Original Full-Page Pages P56-P57)</span>
+              <span style="font-size: 0.8rem; background: rgba(2, 132, 199, 0.1); color: #0284c7; padding: 0.25rem 0.65rem; border-radius: 12px; font-weight: 600;">点击图片直接在全页模式中浏览</span>
+            </div>
+            <div class="unit-page-gallery" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 0.85rem;">
+              <div class="page-thumb-card" onclick="jumpToPage(56)" title="点击跳转至第 56 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
+                <img src="images/pages/page_56.webp" alt="Page 56" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_56.webp'">
+                <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 56 页 📄</div>
+              </div>
+              <div class="page-thumb-card" onclick="jumpToPage(57)" title="点击跳转至第 57 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
+                <img src="images/pages/page_57.webp" alt="Page 57" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_57.webp'">
+                <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 57 页 📄</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="unit-bottom-nav">
+            <button type="button" class="unit-nav-btn prev-btn" onclick="navigateToSection('unit-6')">
+              <span class="nav-arrow">←</span>
+              <div class="nav-text"><span class="nav-label">PREVIOUS</span><span class="nav-title">👔 Unit 6 Clothes</span></div>
+            </button>
+          </div>
+        </section>
+
+        <!-- SECTION: APPENDICES - CHANTS & SONGS -->
+        <section id="app-chants" class="unit-section view-pane" style="display:none;">
+          <div class="unit-header-card" style="background: linear-gradient(135deg, #f59e0b 0%, #ef4444 100%);">
+            <span class="unit-badge">Appendix 1</span>
+            <h2 class="unit-title">歌谣和歌曲 Chants & Songs</h2>
+            <p class="unit-desc">教材附录 歌谣与歌曲文本与原声朗读 (P58 - P61)</p>
+          </div>
+          <div class="lessons-grid">
+            <div class="lesson-card">
+              <div class="lesson-title"><span>Unit 1 Chant</span><span class="page-tag" onclick="jumpToPage(58)">P58 📄</span></div>
+              <div style="padding:0.5rem 0;">
+                <p>Chair, chair, on the chair.</p>
+                <p>Desk, desk, under the desk.</p>
+                <p>Where is the cat? On the chair!</p>
+              </div>
+            </div>
+            <div class="lesson-card">
+              <div class="lesson-title"><span>Unit 3 Song</span><span class="page-tag" onclick="jumpToPage(59)">P59 📄</span></div>
+              <div style="padding:0.5rem 0;">
+                <p>Can I have a car? Sure, sure, sure!</p>
+                <p>Here you are, here you are!</p>
+              </div>
+            </div>
+          </div>
+        
+          <!-- Unit Original Full-Page Images Section -->
+          <div class="unit-pages-card" style="margin: 1.5rem 0; background: var(--card-bg, #ffffff); border-radius: 16px; padding: 1.25rem; box-shadow: 0 4px 20px rgba(0,0,0,0.04); border: 1px solid rgba(0,0,0,0.06);">
+            <div class="lesson-title" style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 1rem;">
+              <span style="font-weight: 700; font-size: 1.05rem; color: var(--text-main, #0f172a);">📖 原版全页课文 (Original Full-Page Pages P58-P61)</span>
+              <span style="font-size: 0.8rem; background: rgba(2, 132, 199, 0.1); color: #0284c7; padding: 0.25rem 0.65rem; border-radius: 12px; font-weight: 600;">点击图片直接在全页模式中高清浏览</span>
+            </div>
+            <div class="unit-page-gallery" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 0.85rem;">
+              <div class="page-thumb-card" onclick="jumpToPage(58)" title="点击跳转至第 58 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
+                <img src="images/pages/page_58.webp" alt="Page 58" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_58.webp'">
+                <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 58 页 📄</div>
+              </div>
+              <div class="page-thumb-card" onclick="jumpToPage(59)" title="点击跳转至第 59 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
+                <img src="images/pages/page_59.webp" alt="Page 59" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_59.webp'">
+                <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 59 页 📄</div>
+              </div>
+              <div class="page-thumb-card" onclick="jumpToPage(60)" title="点击跳转至第 60 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
+                <img src="images/pages/page_60.webp" alt="Page 60" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_60.webp'">
+                <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 60 页 📄</div>
+              </div>
+              <div class="page-thumb-card" onclick="jumpToPage(61)" title="点击跳转至第 61 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
+                <img src="images/pages/page_61.webp" alt="Page 61" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_61.webp'">
+                <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 61 页 📄</div>
+              </div>
+            </div>
+          </div>
+</section>
+
+        <!-- SECTION: APPENDICES - VOCABULARY LIST -->
+        <section id="app-vocab" class="unit-section view-pane" style="display:none;">
+          <div class="unit-header-card" style="background: linear-gradient(135deg, #0284c7 0%, #0f172a 100%);">
+            <span class="unit-badge">Appendix 2</span>
+            <h2 class="unit-title">单元词汇表 Unit Vocabulary</h2>
+            <p class="unit-desc">本册全单元重点词汇完整列表 (P62 - P65)</p>
+          </div>
+          
+          <!-- Unit Original Full-Page Images Section -->
+          <div class="unit-pages-card" style="margin: 1.5rem 0; background: var(--card-bg, #ffffff); border-radius: 16px; padding: 1.25rem; box-shadow: 0 4px 20px rgba(0,0,0,0.04); border: 1px solid rgba(0,0,0,0.06);">
+            <div class="lesson-title" style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 1rem;">
+              <span style="font-weight: 700; font-size: 1.05rem; color: var(--text-main, #0f172a);">📖 原版全页课文 (Original Full-Page Pages P58-P61)</span>
+              <span style="font-size: 0.8rem; background: rgba(2, 132, 199, 0.1); color: #0284c7; padding: 0.25rem 0.65rem; border-radius: 12px; font-weight: 600;">点击图片直接在全页模式中浏览</span>
+            </div>
+            <div class="unit-page-gallery" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 0.85rem;">
+              <div class="page-thumb-card" onclick="jumpToPage(58)" title="点击跳转至第 58 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
+                <img src="images/pages/page_58.webp" alt="Page 58" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_58.webp'">
+                <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 58 页 📄</div>
+              </div>
+              <div class="page-thumb-card" onclick="jumpToPage(59)" title="点击跳转至第 59 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
+                <img src="images/pages/page_59.webp" alt="Page 59" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_59.webp'">
+                <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 59 页 📄</div>
+              </div>
+              <div class="page-thumb-card" onclick="jumpToPage(60)" title="点击跳转至第 60 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
+                <img src="images/pages/page_60.webp" alt="Page 60" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_60.webp'">
+                <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 60 页 📄</div>
+              </div>
+              <div class="page-thumb-card" onclick="jumpToPage(61)" title="点击跳转至第 61 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
+                <img src="images/pages/page_61.webp" alt="Page 61" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_61.webp'">
+                <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 61 页 📄</div>
+              </div>
+            </div>
+          </div>
+
+          <div id="fullVocabGrid" class="vocab-grid" style="margin-top:1rem;"></div>
+        </section>
+
+        <!-- SECTION: APPENDICES - EXPRESSIONS -->
+        <section id="app-expressions" class="unit-section view-pane" style="display:none;">
+          <div class="unit-header-card" style="background: linear-gradient(135deg, #10b981 0%, #047857 100%);">
+            <span class="unit-badge">Appendix 3</span>
+            <h2 class="unit-title">常用语表 Expressions</h2>
+            <p class="unit-desc">全册日常交际常用语与核心表达 (P66 - P71)</p>
+          </div>
+          <div class="lessons-grid">
+            <div class="lesson-card">
+              <div class="lesson-title"><span>日常交际表达 Common Expressions</span></div>
+              <div class="dialogue-list">
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/u1_dlg_1.mp3" data-text="Where is the cat?">
+                  <div><strong>询问位置:</strong> Where is the...? (……在哪里？)</div>
+                </div>
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/u3_dlg_1.mp3" data-text="Can I have a car?">
+                  <div><strong>礼貌请求:</strong> Can I have a...? (我可以要一个……吗？)</div>
+                </div>
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/u4_dlg_1.mp3" data-text="I'm hungry.">
+                  <div><strong>表达感受:</strong> I'm hungry / thirsty. (我饿了 / 我渴了。)</div>
+                </div>
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/u6_dlg_1.mp3" data-text="Put on your shirt.">
+                  <div><strong>指令习惯:</strong> Put on / Take off your... (穿上 / 脱下你的……)</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+          <!-- Unit Original Full-Page Images Section -->
+          <div class="unit-pages-card" style="margin: 1.5rem 0; background: var(--card-bg, #ffffff); border-radius: 16px; padding: 1.25rem; box-shadow: 0 4px 20px rgba(0,0,0,0.04); border: 1px solid rgba(0,0,0,0.06);">
+            <div class="lesson-title" style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 1rem;">
+              <span style="font-weight: 700; font-size: 1.05rem; color: var(--text-main, #0f172a);">📖 原版全页课文 (Original Full-Page Pages P66-P71)</span>
+              <span style="font-size: 0.8rem; background: rgba(2, 132, 199, 0.1); color: #0284c7; padding: 0.25rem 0.65rem; border-radius: 12px; font-weight: 600;">点击图片直接在全页模式中高清浏览</span>
+            </div>
+            <div class="unit-page-gallery" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 0.85rem;">
+              <div class="page-thumb-card" onclick="jumpToPage(66)" title="点击跳转至第 66 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
+                <img src="images/pages/page_66.webp" alt="Page 66" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_66.webp'">
+                <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 66 页 📄</div>
+              </div>
+              <div class="page-thumb-card" onclick="jumpToPage(67)" title="点击跳转至第 67 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
+                <img src="images/pages/page_67.webp" alt="Page 67" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_67.webp'">
+                <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 67 页 📄</div>
+              </div>
+              <div class="page-thumb-card" onclick="jumpToPage(68)" title="点击跳转至第 68 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
+                <img src="images/pages/page_68.webp" alt="Page 68" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_68.webp'">
+                <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 68 页 📄</div>
+              </div>
+              <div class="page-thumb-card" onclick="jumpToPage(69)" title="点击跳转至第 69 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
+                <img src="images/pages/page_69.webp" alt="Page 69" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_69.webp'">
+                <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 69 页 📄</div>
+              </div>
+              <div class="page-thumb-card" onclick="jumpToPage(70)" title="点击跳转至第 70 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
+                <img src="images/pages/page_70.webp" alt="Page 70" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_70.webp'">
+                <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 70 页 📄</div>
+              </div>
+              <div class="page-thumb-card" onclick="jumpToPage(71)" title="点击跳转至第 71 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
+                <img src="images/pages/page_71.webp" alt="Page 71" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_71.webp'">
+                <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 71 页 📄</div>
+              </div>
+            </div>
+          </div>
+</section>
+
+
+        <!-- Page View Mode Section -->
+        <section id="pageview-mode-section" style="display: none; padding: 1.5rem;">
+          <div class="pageview-card">
+            <div class="pageview-toolbar">
+              <div class="page-nav-controls">
+                <button type="button" class="page-btn" onclick="changePage(-1)">◀ 上一页 (Prev)</button>
+                <span class="page-indicator">第 <strong id="currentPageNum">1</strong> / 71 页</span>
+                <button type="button" class="page-btn" onclick="changePage(1)">下一页 (Next) ▶</button>
+              </div>
+              <div class="page-jump-box">
+                <label for="jumpPageInput">跳转页码:</label>
+                <input type="number" id="jumpPageInput" min="1" max="71" value="1" onchange="updatePageViewer(parseInt(this.value))">
+              </div>
+            </div>
+
+            <div class="pageview-grid">
+              <div class="page-image-container">
+                <img id="pdfPageImage" src="images/pages/page_01.webp" alt="Textbook Page" class="textbook-page-img">
+              </div>
+              <div class="page-text-sidebar">
+                <h3 id="pageTranscriptTitle" class="transcript-header">第 1 页 文本内容</h3>
+                <div id="pageTextContent" class="transcript-body">
+                  <p style="color:#94a3b8; font-style:italic;">加载页面文本中...</p>
+                </div>
+              </div>
+            </div>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    // Embedded Data Injection Placeholders
+    window.FALLBACK_PDF_STRUCTURE = {"title": "\u4e49\u52a1\u6559\u80b2\u6559\u79d1\u4e66 \u82f1\u8bed\uff08\u4e00\u5e74\u7ea7\u8d77\u70b9\uff09\u4e00\u5e74\u7ea7\u4e0b\u518c", "grade": "\u4e00\u5e74\u7ea7\u4e0b\u518c", "publisher": "\u4eba\u6c11\u6559\u80b2\u51fa\u7248\u793e", "total_pages": 71, "units": [{"id": "u1", "title": "Unit 1 Classroom", "subtitle": "\u6559\u5ba4", "pages": [6, 7, 8, 9, 10, 11, 12, 13], "vocabulary": [{"word": "chair", "translation": "\u6905\u5b50", "audio": "u1_chair"}, {"word": "desk", "translation": "\u4e66\u684c", "audio": "u1_desk"}, {"word": "blackboard", "translation": "\u9ed1\u677f", "audio": "u1_blackboard"}, {"word": "on", "translation": "\u5728\u2026\u2026\u4e0a\u9762", "audio": "u1_on"}, {"word": "under", "translation": "\u5728\u2026\u2026\u4e0b\u9762", "audio": "u1_under"}, {"word": "in", "translation": "\u5728\u2026\u2026\u91cc\u9762", "audio": "u1_in"}, {"word": "where", "translation": "\u5728\u54ea\u91cc", "audio": "u1_where"}, {"word": "the", "translation": "\u653e\u5728\u540d\u8bcd\u524d\u7279\u6307", "audio": "u1_the"}], "dialogues": [{"speaker": "Bill", "text": "Where is the cat?", "translation": "\u732b\u5728\u54ea\u91cc\uff1f", "audio": "u1_dlg_1"}, {"speaker": "Joy", "text": "It's on the chair.", "translation": "\u5b83\u5728\u6905\u5b50\u4e0a\u3002", "audio": "u1_dlg_2"}, {"speaker": "Binbin", "text": "Where is the ruler?", "translation": "\u5c3a\u5b50\u5728\u54ea\u91cc\uff1f", "audio": "u1_dlg_3"}, {"speaker": "Lily", "text": "It's under the desk.", "translation": "\u5b83\u5728\u4e66\u684c\u4e0b\u9762\u3002", "audio": "u1_dlg_4"}, {"speaker": "Teacher", "text": "Put your book on the desk.", "translation": "\u628a\u4f60\u7684\u4e66\u653e\u5728\u684c\u5b50\u4e0a\u3002", "audio": "u1_dlg_5"}]}, {"id": "u2", "title": "Unit 2 Room", "subtitle": "\u623f\u95f4", "pages": [14, 15, 16, 17, 18, 19, 20, 21], "vocabulary": [{"word": "light", "translation": "\u706f", "audio": "u2_light"}, {"word": "bed", "translation": "\u5e8a", "audio": "u2_bed"}, {"word": "door", "translation": "\u95e8", "audio": "u2_door"}, {"word": "box", "translation": "\u76d2\u5b50\uff0c\u7bb1\u5b50", "audio": "u2_box"}, {"word": "near", "translation": "\u5728\u2026\u2026\u9644\u8fd1", "audio": "u2_near"}, {"word": "behind", "translation": "\u5728\u2026\u2026\u540e\u9762", "audio": "u2_behind"}], "dialogues": [{"speaker": "Yaoyao", "text": "What's in your room?", "translation": "\u4f60\u7684\u623f\u95f4\u91cc\u6709\u4ec0\u4e48\uff1f", "audio": "u2_dlg_1"}, {"speaker": "Joy", "text": "A bed, a light and a desk.", "translation": "\u4e00\u5f20\u5e8a\u3001\u4e00\u76cf\u706f\u548c\u4e00\u5f20\u4e66\u684c\u3002", "audio": "u2_dlg_2"}, {"speaker": "Bill", "text": "Where is the light?", "translation": "\u706f\u5728\u54ea\u91cc\uff1f", "audio": "u2_dlg_3"}, {"speaker": "Andy", "text": "It's near the window.", "translation": "\u5b83\u5728\u7a97\u6237\u9644\u8fd1\u3002", "audio": "u2_dlg_4"}, {"speaker": "Binbin", "text": "Where is the box?", "translation": "\u76d2\u5b50\u5728\u54ea\u91cc\uff1f", "audio": "u2_dlg_5"}, {"speaker": "Lily", "text": "It's behind the door.", "translation": "\u5b83\u5728\u95e8\u540e\u9762\u3002", "audio": "u2_dlg_6"}]}, {"id": "u3", "title": "Unit 3 Toys", "subtitle": "\u73a9\u5177", "pages": [22, 23, 24, 25, 26, 27, 28, 29], "vocabulary": [{"word": "plane", "translation": "\u98de\u673a", "audio": "u3_plane"}, {"word": "ball", "translation": "\u7403", "audio": "u3_ball"}, {"word": "doll", "translation": "\u73a9\u5076\uff0c\u5a03\u5a03", "audio": "u3_doll"}, {"word": "train", "translation": "\u706b\u8f66", "audio": "u3_train"}, {"word": "car", "translation": "\u5c0f\u6c7d\u8f66", "audio": "u3_car"}, {"word": "bear", "translation": "\u73a9\u5177\u718a", "audio": "u3_bear"}, {"word": "can", "translation": "\u80fd\u591f\uff0c\u53ef\u4ee5", "audio": "u3_can"}, {"word": "sure", "translation": "\u5f53\u7136", "audio": "u3_sure"}, {"word": "sorry", "translation": "\u5bf9\u4e0d\u8d77", "audio": "u3_sorry"}], "dialogues": [{"speaker": "Joy", "text": "Can I have a car?", "translation": "\u6211\u53ef\u4ee5\u8981\u8f86\u5c0f\u6c7d\u8f66\u5417\uff1f", "audio": "u3_dlg_1"}, {"speaker": "Bill", "text": "Sure. Here you are.", "translation": "\u5f53\u7136\u53ef\u4ee5\u3002\u7ed9\u4f60\u3002", "audio": "u3_dlg_2"}, {"speaker": "Yaoyao", "text": "Can I have a plane?", "translation": "\u6211\u53ef\u4ee5\u8981\u67b6\u98de\u673a\u5417\uff1f", "audio": "u3_dlg_3"}, {"speaker": "Andy", "text": "Sorry, no.", "translation": "\u5bf9\u4e0d\u8d77\uff0c\u4e0d\u884c\u3002", "audio": "u3_dlg_4"}, {"speaker": "Lily", "text": "I have a bear.", "translation": "\u6211\u6709\u4e00\u53ea\u73a9\u5177\u718a\u3002", "audio": "u3_dlg_5"}]}, {"id": "u4", "title": "Unit 4 Food", "subtitle": "\u98df\u7269", "pages": [32, 33, 34, 35, 36, 37, 38, 39], "vocabulary": [{"word": "rice", "translation": "\u7c73\u996d", "audio": "u4_rice"}, {"word": "noodles", "translation": "\u9762\u6761", "audio": "u4_noodles"}, {"word": "vegetable", "translation": "\u852c\u83dc", "audio": "u4_vegetable"}, {"word": "fish", "translation": "\u9c7c", "audio": "u4_fish"}, {"word": "chicken", "translation": "\u9e21\u8089", "audio": "u4_chicken"}, {"word": "egg", "translation": "\u9e21\u86cb", "audio": "u4_egg"}, {"word": "hungry", "translation": "\u9965\u997f\u7684", "audio": "u4_hungry"}, {"word": "want", "translation": "\u60f3\u8981", "audio": "u4_want"}, {"word": "and", "translation": "\u548c", "audio": "u4_and"}], "dialogues": [{"speaker": "Andy", "text": "I'm hungry.", "translation": "\u6211\u997f\u4e86\u3002", "audio": "u4_dlg_1"}, {"speaker": "Binbin", "text": "I want rice and chicken.", "translation": "\u6211\u60f3\u5403\u7c73\u996d\u548c\u9e21\u8089\u3002", "audio": "u4_dlg_2"}, {"speaker": "Joy", "text": "What do you want?", "translation": "\u4f60\u60f3\u8981\u4ec0\u4e48\uff1f", "audio": "u4_dlg_3"}, {"speaker": "Lily", "text": "I want noodles.", "translation": "\u6211\u60f3\u8981\u9762\u6761\u3002", "audio": "u4_dlg_4"}, {"speaker": "Bill", "text": "Do you like fish?", "translation": "\u4f60\u559c\u6b22\u9c7c\u8089\u5417\uff1f", "audio": "u4_dlg_5"}, {"speaker": "Yaoyao", "text": "Yes, I do.", "translation": "\u662f\u7684\uff0c\u6211\u559c\u6b22\u3002", "audio": "u4_dlg_6"}]}, {"id": "u5", "title": "Unit 5 Drink", "subtitle": "\u996e\u6599", "pages": [40, 41, 42, 43, 44, 45, 46, 47], "vocabulary": [{"word": "juice", "translation": "\u679c\u6c41", "audio": "u5_juice"}, {"word": "tea", "translation": "\u8336", "audio": "u5_tea"}, {"word": "milk", "translation": "\u725b\u5976", "audio": "u5_milk"}, {"word": "water", "translation": "\u6c34", "audio": "u5_water"}, {"word": "thirsty", "translation": "\u53e3\u6e34\u7684", "audio": "u5_thirsty"}, {"word": "thanks", "translation": "\u611f\u8c22", "audio": "u5_thanks"}], "dialogues": [{"speaker": "Binbin", "text": "I'm thirsty.", "translation": "\u6211\u53e3\u6e34\u4e86\u3002", "audio": "u5_dlg_1"}, {"speaker": "Andy", "text": "I want water.", "translation": "\u6211\u60f3\u559d\u6c34\u3002", "audio": "u5_dlg_2"}, {"speaker": "Lily", "text": "Can I have some milk?", "translation": "\u6211\u53ef\u4ee5\u559d\u70b9\u725b\u5976\u5417\uff1f", "audio": "u5_dlg_3"}, {"speaker": "Joy", "text": "Here you are.", "translation": "\u7ed9\u4f60\u3002", "audio": "u5_dlg_4"}, {"speaker": "Lily", "text": "Thanks.", "translation": "\u8c22\u8c22\u3002", "audio": "u5_dlg_5"}]}, {"id": "u6", "title": "Unit 6 Clothes", "subtitle": "\u670d\u88c5", "pages": [48, 49, 50, 51, 52, 53, 54, 55], "vocabulary": [{"word": "shirt", "translation": "\u886c\u886b", "audio": "u6_shirt"}, {"word": "T-shirt", "translation": "T\u6064\u886b", "audio": "u6_tshirt"}, {"word": "skirt", "translation": "\u88d9\u5b50", "audio": "u6_skirt"}, {"word": "dress", "translation": "\u8fde\u8863\u88d9", "audio": "u6_dress"}, {"word": "socks", "translation": "\u77ed\u889c", "audio": "u6_socks"}, {"word": "shorts", "translation": "\u77ed\u88e4", "audio": "u6_shorts"}, {"word": "your", "translation": "\u4f60\u7684", "audio": "u6_your"}], "dialogues": [{"speaker": "Teacher", "text": "Put on your shirt.", "translation": "\u7a7f\u4e0a\u4f60\u7684\u886c\u886b\u3002", "audio": "u6_dlg_1"}, {"speaker": "Bill", "text": "Take off your socks.", "translation": "\u8131\u4e0b\u4f60\u7684\u77ed\u889c\u3002", "audio": "u6_dlg_2"}, {"speaker": "Joy", "text": "I like your dress.", "translation": "\u6211\u559c\u6b22\u4f60\u7684\u8fde\u8863\u88d9\u3002", "audio": "u6_dlg_3"}, {"speaker": "Yaoyao", "text": "Thank you.", "translation": "\u8c22\u8c22\u4f60\u3002", "audio": "u6_dlg_4"}, {"speaker": "Andy", "text": "Is this your T-shirt?", "translation": "\u8fd9\u662f\u4f60\u7684T\u6064\u886b\u5417\uff1f", "audio": "u6_dlg_5"}, {"speaker": "Binbin", "text": "Yes, it is.", "translation": "\u662f\u7684\uff0c\u5b83\u662f\u3002", "audio": "u6_dlg_6"}]}]};
+    const QUIZZES = {"unit-1": {"title": "Unit 1: Classroom 单元测试 (含听力题)", "questions": [{"q": "听录音，选出你听到的单词：", "audio": "audio/u1_chair.mp3", "audioText": "chair", "opts": ["chair", "desk", "blackboard", "book"], "ans": 0}, {"q": "听录音，选出你听到的单词：", "audio": "audio/u1_desk.mp3", "audioText": "desk", "opts": ["ruler", "desk", "pencil", "chair"], "ans": 1}, {"q": "听录音，选出你听到的单词：", "audio": "audio/u1_blackboard.mp3", "audioText": "blackboard", "opts": ["blackboard", "window", "door", "desk"], "ans": 0}, {"q": "听录音，选出对应的中文翻译：", "audio": "audio/u1_under.mp3", "audioText": "under", "opts": ["在……上面", "在……下面", "在……里面", "在……附近"], "ans": 1}, {"q": "听问句录音，选出正确的英文句子：", "audio": "audio/u1_dlg_1.mp3", "audioText": "Where is the cat?", "opts": ["Where is the cat?", "It's on the chair.", "Put your book on the desk.", "Where is the ruler?"], "ans": 0}, {"q": "“椅子” 的英文是：", "opts": ["chair", "desk", "blackboard", "book"], "ans": 0}, {"q": "“黑板” 的英文是：", "opts": ["blackboard", "chair", "desk", "door"], "ans": 0}, {"q": "“在……里面” 的英文介词是：", "opts": ["in", "on", "under", "behind"], "ans": 0}, {"q": "“猫在椅子上面。” 用英文怎么说？", "opts": ["It's on the chair.", "It's under the desk.", "It's in the desk.", "It's behind the door."], "ans": 0}, {"q": "“把你的书放在书桌上。” 用英文怎么说？", "opts": ["Put your book on the desk.", "Where is the cat?", "It's under the chair.", "Put on your shirt."], "ans": 0}]}, "unit-2": {"title": "Unit 2: Room 单元测试 (含听力题)", "questions": [{"q": "听录音，选出你听到的房间物品：", "audio": "audio/u2_light.mp3", "audioText": "light", "opts": ["light", "bed", "door", "box"], "ans": 0}, {"q": "听录音，选出你听到的单词：", "audio": "audio/u2_bed.mp3", "audioText": "bed", "opts": ["desk", "bed", "light", "chair"], "ans": 1}, {"q": "听录音，选出对应的中文意思：", "audio": "audio/u2_behind.mp3", "audioText": "behind", "opts": ["在……附近", "在……背后", "在……上面", "在……下面"], "ans": 1}, {"q": "听录音，选出你听到的问句：", "audio": "audio/u2_dlg_1.mp3", "audioText": "What's in your room?", "opts": ["What's in your room?", "Where is the light?", "Where is the box?", "Is this your room?"], "ans": 0}, {"q": "听录音，选出听到的回答：", "audio": "audio/u2_dlg_6.mp3", "audioText": "It's behind the door.", "opts": ["It's behind the door.", "It's near the window.", "A bed, a light and a desk.", "It's on the chair."], "ans": 0}, {"q": "“灯” 的英文单词是：", "opts": ["light", "bed", "door", "box"], "ans": 0}, {"q": "“盒子，箱子” 的英文单词是：", "opts": ["box", "bed", "door", "chair"], "ans": 0}, {"q": "“在……附近” 的英文介词是：", "opts": ["near", "behind", "under", "in"], "ans": 0}, {"q": "“灯在窗户附近。” 英文怎么表达？", "opts": ["It's near the window.", "It's behind the door.", "What's in your room?", "A bed and a light."], "ans": 0}, {"q": "“你的房间里有什么？” 英文怎么表达？", "opts": ["What's in your room?", "Where is the box?", "Is it behind the door?", "What do you want?"], "ans": 0}]}, "unit-3": {"title": "Unit 3: Toys 单元测试 (含听力题)", "questions": [{"q": "听录音，选出你听到的玩具单词：", "audio": "audio/u3_plane.mp3", "audioText": "plane", "opts": ["plane", "ball", "car", "train"], "ans": 0}, {"q": "听录音，选出你听到的玩具：", "audio": "audio/u3_bear.mp3", "audioText": "bear", "opts": ["doll", "bear", "car", "train"], "ans": 1}, {"q": "听录音，选出你听到的答语：", "audio": "audio/u3_dlg_2.mp3", "audioText": "Sure. Here you are.", "opts": ["Sure. Here you are.", "Sorry, no.", "I have a bear.", "Can I have a car?"], "ans": 0}, {"q": "听录音，选出对应的请求句：", "audio": "audio/u3_dlg_1.mp3", "audioText": "Can I have a car?", "opts": ["Can I have a car?", "Can I have a plane?", "I have a bear.", "Where is the car?"], "ans": 0}, {"q": "听录音，选出抱歉的礼貌用语：", "audio": "audio/u3_dlg_4.mp3", "audioText": "Sorry, no.", "opts": ["Sorry, no.", "Sure. Here you are.", "Thank you.", "Thanks."], "ans": 0}, {"q": "“飞机” 的英文单词是：", "opts": ["plane", "train", "car", "ball"], "ans": 0}, {"q": "“小汽车” 的英文单词是：", "opts": ["car", "plane", "train", "bear"], "ans": 0}, {"q": "“我可以要辆小汽车吗？” 英文表达为：", "opts": ["Can I have a car?", "Can I have a plane?", "I have a car.", "Where is the car?"], "ans": 0}, {"q": "“当然可以，给你。” 英文表达为：", "opts": ["Sure. Here you are.", "Sorry, no.", "Thank you.", "Yes, I do."], "ans": 0}, {"q": "“我有一只玩具熊。” 英文表达为：", "opts": ["I have a bear.", "Can I have a bear?", "I want a bear.", "This is my bear."], "ans": 0}]}, "unit-4": {"title": "Unit 4: Food 单元测试 (含听力题)", "questions": [{"q": "听录音，选出你听到的食物：", "audio": "audio/u4_rice.mp3", "audioText": "rice", "opts": ["rice", "noodles", "vegetable", "fish"], "ans": 0}, {"q": "听录音，选出你听到的食物：", "audio": "audio/u4_noodles.mp3", "audioText": "noodles", "opts": ["chicken", "noodles", "egg", "fish"], "ans": 1}, {"q": "听录音，选出对应的英文表达：", "audio": "audio/u4_dlg_1.mp3", "audioText": "I'm hungry.", "opts": ["I'm hungry.", "I'm thirsty.", "I want rice.", "Do you like fish?"], "ans": 0}, {"q": "听录音，选出你听到的句子：", "audio": "audio/u4_dlg_2.mp3", "audioText": "I want rice and chicken.", "opts": ["I want rice and chicken.", "I want noodles.", "I want fish and eggs.", "Do you like chicken?"], "ans": 0}, {"q": "听录音，选出你听到的问句：", "audio": "audio/u4_dlg_5.mp3", "audioText": "Do you like fish?", "opts": ["Do you like fish?", "What do you want?", "I'm hungry.", "Can I have some fish?"], "ans": 0}, {"q": "“面条” 的英文单词是：", "opts": ["noodles", "rice", "vegetable", "chicken"], "ans": 0}, {"q": "“饥饿的” 英文单词是：", "opts": ["hungry", "thirsty", "sorry", "sure"], "ans": 0}, {"q": "“我想吃米饭和鸡肉。” 英文表达为：", "opts": ["I want rice and chicken.", "I want noodles and eggs.", "I like fish.", "I'm hungry."], "ans": 0}, {"q": "“你想要什么？” 英文表达为：", "opts": ["What do you want?", "Do you like fish?", "Where is the food?", "What's in your room?"], "ans": 0}, {"q": "“你喜欢鱼肉吗？” 英文表达为：", "opts": ["Do you like fish?", "Do you like chicken?", "I like fish.", "Yes, I do."], "ans": 0}]}, "unit-5": {"title": "Unit 5: Drink 单元测试 (含听力题)", "questions": [{"q": "听录音，选出你听到的饮品：", "audio": "audio/u5_juice.mp3", "audioText": "juice", "opts": ["juice", "tea", "milk", "water"], "ans": 0}, {"q": "听录音，选出你听到的单词：", "audio": "audio/u5_milk.mp3", "audioText": "milk", "opts": ["water", "milk", "tea", "juice"], "ans": 1}, {"q": "听录音，选出你听到的状态形容词：", "audio": "audio/u5_thirsty.mp3", "audioText": "thirsty", "opts": ["thirsty", "hungry", "thanks", "water"], "ans": 0}, {"q": "听录音，选出你听到的表达：", "audio": "audio/u5_dlg_2.mp3", "audioText": "I want water.", "opts": ["I want water.", "I'm thirsty.", "Can I have some milk?", "Here you are."], "ans": 0}, {"q": "听录音，选出你听到的请求句：", "audio": "audio/u5_dlg_3.mp3", "audioText": "Can I have some milk?", "opts": ["Can I have some milk?", "I want water.", "Here you are.", "Thanks."], "ans": 0}, {"q": "“果汁” 的英文单词是：", "opts": ["juice", "tea", "milk", "water"], "ans": 0}, {"q": "“口渴的” 英文单词是：", "opts": ["thirsty", "hungry", "sorry", "sure"], "ans": 0}, {"q": "“我想喝水。” 英文表达为：", "opts": ["I want water.", "I'm thirsty.", "Can I have some milk?", "Thanks."], "ans": 0}, {"q": "“我可以喝点牛奶吗？” 英文表达为：", "opts": ["Can I have some milk?", "Can I have a car?", "I want milk.", "Do you like milk?"], "ans": 0}, {"q": "“给你。” 英文表达为：", "opts": ["Here you are.", "Sure.", "Thanks.", "Thank you."], "ans": 0}]}, "unit-6": {"title": "Unit 6: Clothes 单元测试 (含听力题)", "questions": [{"q": "听录音，选出你听到的服装：", "audio": "audio/u6_shirt.mp3", "audioText": "shirt", "opts": ["shirt", "T-shirt", "skirt", "dress"], "ans": 0}, {"q": "听录音，选出你听到的服装：", "audio": "audio/u6_skirt.mp3", "audioText": "skirt", "opts": ["dress", "skirt", "socks", "shorts"], "ans": 1}, {"q": "听录音，选出听到的指令句：", "audio": "audio/u6_dlg_1.mp3", "audioText": "Put on your shirt.", "opts": ["Put on your shirt.", "Take off your socks.", "I like your dress.", "Is this your T-shirt?"], "ans": 0}, {"q": "听录音，选出听到的夸赞表达：", "audio": "audio/u6_dlg_3.mp3", "audioText": "I like your dress.", "opts": ["I like your dress.", "Thank you.", "Put on your shirt.", "Take off your socks."], "ans": 0}, {"q": "听录音，选出听到的问句：", "audio": "audio/u6_dlg_5.mp3", "audioText": "Is this your T-shirt?", "opts": ["Is this your T-shirt?", "Put on your shirt.", "Yes, it is.", "Thank you."], "ans": 0}, {"q": "“连衣裙” 的英文单词是：", "opts": ["dress", "skirt", "shirt", "shorts"], "ans": 0}, {"q": "“短裤” 的英文单词是：", "opts": ["shorts", "socks", "skirt", "shirt"], "ans": 0}, {"q": "“穿上你的衬衫。” 英文表达为：", "opts": ["Put on your shirt.", "Take off your socks.", "I like your dress.", "Is this your T-shirt?"], "ans": 0}, {"q": "“脱下你的短袜。” 英文表达为：", "opts": ["Take off your socks.", "Put on your shirt.", "I like your dress.", "Thank you."], "ans": 0}, {"q": "“这是你的T恤衫吗？” 英文表达为：", "opts": ["Is this your T-shirt?", "Is this your dress?", "Put on your T-shirt.", "I like your T-shirt."], "ans": 0}]}};
+
+    // Audio Controller
+    let currentAudio = null;
+    let toastTimeout = null;
+
+    function playAudio(audioUrl, text) {
+      if (!audioUrl) return;
+      if (currentAudio) {
+        currentAudio.pause();
+        currentAudio.currentTime = 0;
+      }
+      currentAudio = new Audio(audioUrl);
+      
+      const toast = document.getElementById('audioToast');
+      const toastText = document.getElementById('audioToastText');
+      if (toast && toastText) {
+        toastText.textContent = text ? `正在播放: "${text}"` : '正在播放音轨...';
+        toast.classList.add('show');
+        clearTimeout(toastTimeout);
+      }
+
+      currentAudio.play().catch(err => console.log('Audio playback prevented:', err));
+      currentAudio.onended = () => {
+        if (toast) {
+          toastTimeout = setTimeout(() => toast.classList.remove('show'), 1500);
+        }
+      };
+    }
+
+    // Attach delegated audio triggers
+    document.addEventListener('click', function(e) {
+      const trigger = e.target.closest('.audio-trigger');
+      if (trigger) {
+        const audio = trigger.getAttribute('data-audio');
+        const text = trigger.getAttribute('data-text');
+        if (audio) playAudio(audio, text);
+      }
+    });
+
+    // Web Speech API Fallback
+    function speak(text) {
+      if ('speechSynthesis' in window) {
+        window.speechSynthesis.cancel();
+        const msg = new SpeechSynthesisUtterance(text);
+        msg.lang = 'en-US';
+        msg.rate = 0.85;
+        window.speechSynthesis.speak(msg);
+      }
+    }
+
+    // PDF Structure Text Data Loader
+    let pdfData = window.FALLBACK_PDF_STRUCTURE || [];
+    let currentPage = 1;
+
+    if (window.location.protocol.startsWith('http')) {
+      fetch('pdf_structure.json')
+        .then(res => res.json())
+        .then(data => {
+          pdfData = data;
+          renderFullVocab();
+          updatePageViewer(1);
+        })
+        .catch(err => {
+          console.log('Loaded embedded JSON fallback:', err);
+          renderFullVocab();
+          updatePageViewer(1);
+        });
+    } else {
+      renderFullVocab();
+      updatePageViewer(1);
+    }
+
+    // Toggle Sidebar (Mobile Drawer & Desktop Collapse)
+    function toggleSidebar(show) {
+      const sidebar = document.querySelector('.app-sidebar');
+      const overlay = document.getElementById('sidebarOverlay');
+      if (!sidebar) return;
+
+      const isMobile = window.innerWidth <= 992;
+      if (isMobile) {
+        if (show === undefined) {
+          show = !sidebar.classList.contains('open');
+        }
+        if (show) {
+          sidebar.classList.add('open');
+          if (overlay) overlay.classList.add('show');
+        } else {
+          sidebar.classList.remove('open');
+          if (overlay) overlay.classList.remove('show');
+        }
+      } else {
+        if (show === undefined) {
+          sidebar.classList.toggle('collapsed');
+        } else if (show) {
+          sidebar.classList.remove('collapsed');
+        } else {
+          sidebar.classList.add('collapsed');
+        }
+      }
+    }
+
+    let lastActiveUnit = 'unit-1';
+
+    function switchNav(sectionId, element) {
+      document.querySelectorAll('.sidebar-nav .nav-item').forEach(item => item.classList.remove('active'));
+      if (element) element.classList.add('active');
+
+      lastActiveUnit = sectionId;
+
+      document.querySelectorAll('.unit-section').forEach(sec => sec.style.display = 'none');
+      document.getElementById('pageview-mode-section').style.display = 'none';
+
+      const targetSec = document.getElementById(sectionId);
+      if (targetSec) targetSec.style.display = 'block';
+
+      setViewMode('interactive');
+
+      // Scroll top
+      document.getElementById('contentViewport').scrollTop = 0;
+
+      // Close mobile drawer on item selection
+      toggleSidebar(false);
+    }
+
+    function scrollToTop() {
+      const viewport = document.getElementById('contentViewport');
+      if (viewport) {
+        viewport.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    }
+
+    function navigateToSection(targetId) {
+      if (!targetId) return;
+      const targetNav = document.querySelector(`.sidebar-nav .nav-item[href="#${targetId}"]`);
+      switchNav(targetId, targetNav);
+      scrollToTop();
+    }
+
+    // Toggle Back-To-Top button on viewport scroll
+    window.addEventListener('DOMContentLoaded', function() {
+      const viewport = document.getElementById('contentViewport');
+      const topBtn = document.getElementById('backToTopBtn');
+      if (viewport && topBtn) {
+        viewport.addEventListener('scroll', function() {
+          if (viewport.scrollTop > 220) {
+            topBtn.classList.add('show');
+          } else {
+            topBtn.classList.remove('show');
+          }
+        });
+      }
+    });
+
+    // Listen for hashchange for native browser back/forward and direct links
+    window.addEventListener('hashchange', function() {
+      const hash = window.location.hash.replace('#', '');
+      if (hash) {
+        const targetNav = document.querySelector(`.sidebar-nav .nav-item[href="#${hash}"]`);
+        if (targetNav) {
+          switchNav(hash, targetNav);
+        }
+      }
+    });
+
+    function setViewMode(mode) {
+      document.querySelectorAll('.view-tab').forEach(t => t.classList.remove('active'));
+      
+      if (mode === 'interactive') {
+        document.getElementById('tab-interactive').classList.add('active');
+        document.getElementById('pageview-mode-section').style.display = 'none';
+        document.querySelectorAll('.unit-section').forEach(sec => sec.style.display = 'none');
+        const activeSec = document.getElementById(lastActiveUnit) || document.getElementById('unit-1');
+        if (activeSec) activeSec.style.display = 'block';
+      } else if (mode === 'pageview') {
+        document.getElementById('tab-pageview').classList.add('active');
+        document.querySelectorAll('.unit-section').forEach(sec => sec.style.display = 'none');
+        document.getElementById('pageview-mode-section').style.display = 'block';
+      } else if (mode === 'vocab') {
+        document.getElementById('tab-vocab').classList.add('active');
+        document.querySelectorAll('.unit-section').forEach(sec => sec.style.display = 'none');
+        document.getElementById('pageview-mode-section').style.display = 'none';
+        document.getElementById('app-vocab').style.display = 'block';
+      }
+    }
+
+    function changePage(delta) {
+      let newPage = currentPage + delta;
+      if (newPage >= 1 && newPage <= 71) {
+        currentPage = newPage;
+        updatePageViewer(currentPage);
+      }
+    }
+
+    function updatePageViewer(pageNum) {
+      const pageStr = String(pageNum).padStart(2, '0');
+      document.getElementById('pdfPageImage').src = `images/pages/page_${pageStr}.webp`;
+      document.getElementById('currentPageNum').innerText = pageNum;
+      document.getElementById('pageTranscriptTitle').innerText = `第 ${pageNum} 页 文本与提取内容`;
+
+      const pageInfo = Array.isArray(pdfData) ? pdfData.find(p => p.page === pageNum) : null;
+      const textContainer = document.getElementById('pageTextContent');
+      if (pageInfo && pageInfo.text && pageInfo.text.trim()) {
+        textContainer.innerHTML = pageInfo.text.split('\n').map(line => `<p style="margin-bottom:0.5rem; cursor:pointer;" onclick="speak(this.innerText)">🗣️ ${line}</p>`).join('');
+      } else {
+        textContainer.innerHTML = '<p style="color:#94a3b8; font-style:italic;">(此页面为整页图画/插图，无纯文本识别数据。请参看左侧高清页面。)</p>';
+      }
+
+      // Performance Optimization: Preload adjacent textbook page images
+      [pageNum + 1, pageNum - 1].forEach(pNum => {
+        if (pNum >= 1 && pNum <= 71) {
+          const img = new Image();
+          img.src = `images/pages/page_${String(pNum).padStart(2, '0')}.webp`;
+        }
+      });
+    }
+
+    function renderFullVocab() {
+      const vocabList = [
+        { w: 'chair', p: '/tʃeə/', m: '椅子', u: 'Unit 1', audio: 'audio/u1_chair.mp3' },
+        { w: 'desk', p: '/desk/', m: '书桌', u: 'Unit 1', audio: 'audio/u1_desk.mp3' },
+        { w: 'blackboard', p: '/ˈblækbɔːd/', m: '黑板', u: 'Unit 1', audio: 'audio/u1_blackboard.mp3' },
+        { w: 'on', p: '/ɒn/', m: '在……上面', u: 'Unit 1', audio: 'audio/u1_on.mp3' },
+        { w: 'under', p: '/ˈʌndə/', m: '在……下面', u: 'Unit 1', audio: 'audio/u1_under.mp3' },
+        { w: 'in', p: '/ɪn/', m: '在……里面', u: 'Unit 1', audio: 'audio/u1_in.mp3' },
+        { w: 'where', p: '/weə/', m: '在哪里', u: 'Unit 1', audio: 'audio/u1_where.mp3' },
+        { w: 'light', p: '/laɪt/', m: '灯', u: 'Unit 2', audio: 'audio/u2_light.mp3' },
+        { w: 'bed', p: '/bed/', m: '床', u: 'Unit 2', audio: 'audio/u2_bed.mp3' },
+        { w: 'door', p: '/dɔː/', m: '门', u: 'Unit 2', audio: 'audio/u2_door.mp3' },
+        { w: 'box', p: '/bɒks/', m: '盒子，箱子', u: 'Unit 2', audio: 'audio/u2_box.mp3' },
+        { w: 'near', p: '/nɪə/', m: '在……附近', u: 'Unit 2', audio: 'audio/u2_near.mp3' },
+        { w: 'behind', p: '/bɪˈhaɪnd/', m: '在……后面', u: 'Unit 2', audio: 'audio/u2_behind.mp3' },
+        { w: 'plane', p: '/pleɪn/', m: '飞机', u: 'Unit 3', audio: 'audio/u3_plane.mp3' },
+        { w: 'ball', p: '/bɔːl/', m: '球', u: 'Unit 3', audio: 'audio/u3_ball.mp3' },
+        { w: 'doll', p: '/dɒl/', m: '玩偶，娃娃', u: 'Unit 3', audio: 'audio/u3_doll.mp3' },
+        { w: 'train', p: '/treɪn/', m: '火车', u: 'Unit 3', audio: 'audio/u3_train.mp3' },
+        { w: 'car', p: '/kɑː/', m: '小汽车', u: 'Unit 3', audio: 'audio/u3_car.mp3' },
+        { w: 'bear', p: '/beə/', m: '玩具熊', u: 'Unit 3', audio: 'audio/u3_bear.mp3' },
+        { w: 'rice', p: '/raɪs/', m: '米饭', u: 'Unit 4', audio: 'audio/u4_rice.mp3' },
+        { w: 'noodles', p: '/ˈnuːdlz/', m: '面条', u: 'Unit 4', audio: 'audio/u4_noodles.mp3' },
+        { w: 'vegetable', p: '/ˈvedʒtəbl/', m: '蔬菜', u: 'Unit 4', audio: 'audio/u4_vegetable.mp3' },
+        { w: 'fish', p: '/fɪʃ/', m: '鱼', u: 'Unit 4', audio: 'audio/u4_fish.mp3' },
+        { w: 'chicken', p: '/ˈtʃɪkɪn/', m: '鸡肉', u: 'Unit 4', audio: 'audio/u4_chicken.mp3' },
+        { w: 'egg', p: '/eɡ/', m: '鸡蛋', u: 'Unit 4', audio: 'audio/u4_egg.mp3' },
+        { w: 'juice', p: '/dʒuːs/', m: '果汁', u: 'Unit 5', audio: 'audio/u5_juice.mp3' },
+        { w: 'tea', p: '/tiː/', m: '茶', u: 'Unit 5', audio: 'audio/u5_tea.mp3' },
+        { w: 'milk', p: '/mɪlk/', m: '牛奶', u: 'Unit 5', audio: 'audio/u5_milk.mp3' },
+        { w: 'water', p: '/ˈwɔːtə/', m: '水', u: 'Unit 5', audio: 'audio/u5_water.mp3' },
+        { w: 'shirt', p: '/ʃɜːt/', m: '衬衫', u: 'Unit 6', audio: 'audio/u6_shirt.mp3' },
+        { w: 'T-shirt', p: '/ˈtiː ʃɜːt/', m: 'T恤衫', u: 'Unit 6', audio: 'audio/u6_tshirt.mp3' },
+        { w: 'skirt', p: '/skɜːt/', m: '裙子', u: 'Unit 6', audio: 'audio/u6_skirt.mp3' },
+        { w: 'dress', p: '/dres/', m: '连衣裙', u: 'Unit 6', audio: 'audio/u6_dress.mp3' },
+        { w: 'socks', p: '/sɒks/', m: '短袜', u: 'Unit 6', audio: 'audio/u6_socks.mp3' },
+        { w: 'shorts', p: '/ʃɔːts/', m: '短裤', u: 'Unit 6', audio: 'audio/u6_shorts.mp3' }
+      ];
+
+      const grid = document.getElementById('fullVocabGrid');
+      if (grid) {
+        grid.innerHTML = vocabList.map(item => `
+          <div class="vocab-card audio-trigger" data-audio="${item.audio}" data-text="${item.w}">
+            <div class="vocab-word">${item.w} 🎵</div>
+            <div class="vocab-phonetic">${item.p}</div>
+            <div class="vocab-meaning">${item.m}</div>
+            <div style="font-size:0.7rem; color:#94a3b8; margin-top:0.3rem;">${item.u}</div>
+          </div>
+        `).join('');
+      }
+    }
+
+    // Cached DOM Text Search Index
+    let searchIndexCache = null;
+
+    function getSearchIndex() {
+      if (!searchIndexCache) {
+        searchIndexCache = Array.from(document.querySelectorAll('.vocab-card, .dialogue-bubble, .lesson-card')).map(el => ({
+          element: el,
+          text: el.textContent.toLowerCase()
+        }));
+      }
+      return searchIndexCache;
+    }
+
+    function handleSearch() {
+      const q = document.getElementById('searchInput').value.toLowerCase().trim();
+      const index = getSearchIndex();
+
+      if (!q) {
+        index.forEach(item => item.element.style.display = '');
+        return;
+      }
+
+      setViewMode('interactive');
+      document.querySelectorAll('.unit-section').forEach(sec => sec.style.display = 'block');
+
+      index.forEach(item => {
+        item.element.style.display = item.text.includes(q) ? '' : 'none';
+      });
+    }
+
+    // ===== QUIZ ENGINE =====
+    function renderQuiz(unitId) {
+      const container = document.getElementById('quiz-' + unitId);
+      if (!container || !QUIZZES[unitId]) return;
+      const quiz = QUIZZES[unitId];
+      const labels = ['A', 'B', 'C', 'D'];
+      let html = `
+        <div class="quiz-header">
+          <h3>📝 ${quiz.title}</h3>
+          <span class="quiz-badge">10 Points</span>
+        </div>
+        <div id="quiz-questions-${unitId}">`;
+      quiz.questions.forEach((q, qi) => {
+        const listeningTag = q.audioText ? `<span class="quiz-listening-tag">🎧 听力题</span>` : '';
+        const safeText = q.audioText ? q.audioText.replace(/"/g, '&quot;') : '';
+        const playBtn = q.audioText ? `<button type="button" class="quiz-speak-btn audio-trigger" data-audio="${q.audio || ''}" data-text="${safeText}">🔊 点击听音 Play</button>` : '';
+        html += `<div class="quiz-question" id="qq-${unitId}-${qi}">
+          <div class="quiz-q-text"><span class="quiz-q-num">${qi+1}</span>${listeningTag}${q.q}${playBtn}</div>
+          <div class="quiz-options">`;
+        q.opts.forEach((opt, oi) => {
+          html += `<label class="quiz-option" id="opt-${unitId}-${qi}-${oi}">
+            <input type="radio" name="q-${unitId}-${qi}" value="${oi}"> ${labels[oi]}. ${opt}
+          </label>`;
+        });
+        html += `</div></div>`;
+      });
+      html += `</div>
+        <div class="quiz-actions">
+          <button class="quiz-submit-btn" onclick="submitQuiz('${unitId}')">✅ Submit Quiz</button>
+          <button class="quiz-reset-btn" onclick="resetQuiz('${unitId}')">🔄 Reset</button>
+        </div>
+        <div class="quiz-result" id="quiz-result-${unitId}">
+          <span class="quiz-result-icon"></span>
+          <div class="quiz-result-text">
+            <div class="quiz-result-score"></div>
+            <div class="quiz-result-label"></div>
+          </div>
+        </div>`;
+      container.innerHTML = html;
+    }
+
+    function submitQuiz(unitId) {
+      const quiz = QUIZZES[unitId];
+      if (!quiz) return;
+      let score = 0;
+      quiz.questions.forEach((q, qi) => {
+        const selected = document.querySelector(`input[name="q-${unitId}-${qi}"]:checked`);
+        const correct = q.ans;
+        let chosen = null;
+        if (selected) {
+          chosen = parseInt(selected.value);
+          if (chosen === correct) score++;
+        }
+        // Mark all options
+        q.opts.forEach((_, oi) => {
+          const label = document.getElementById(`opt-${unitId}-${qi}-${oi}`);
+          if (!label) return;
+          label.classList.add('disabled');
+          if (oi === correct) label.classList.add('correct-answer');
+          if (chosen !== null && oi === chosen && chosen !== correct) label.classList.add('wrong');
+          if (chosen !== null && oi === chosen && chosen === correct) label.classList.add('correct');
+        });
+      });
+
+      // Disable submit button
+      const submitBtn = document.querySelector(`#quiz-${unitId} .quiz-submit-btn`);
+      if (submitBtn) submitBtn.disabled = true;
+
+      // Show result score card
+      const resultEl = document.getElementById(`quiz-result-${unitId}`);
+      if (!resultEl) return;
+      const grade = score >= 9 ? 'a' : score >= 6 ? 'b' : 'c';
+      const icons = { a: '🏆', b: '👍', c: '💪' };
+      const msgs = {
+        a: 'Excellent! Outstanding work!',
+        b: 'Good job! Keep practicing!',
+        c: score === 0 ? 'Score: 0 / 10. Try taking the test again!' : 'Keep going! Try again!'
+      };
+      resultEl.className = `quiz-result show grade-${grade}`;
+      resultEl.querySelector('.quiz-result-icon').textContent = icons[grade];
+      resultEl.querySelector('.quiz-result-score').textContent = `${score} / 10`;
+      resultEl.querySelector('.quiz-result-label').textContent = msgs[grade];
+      resultEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
+    function resetQuiz(unitId) {
+      renderQuiz(unitId);
+    }
+
+    function renderAllQuizzes() {
+      Object.keys(QUIZZES).forEach(uid => renderQuiz(uid));
+    }
+
+    renderAllQuizzes();
+  </script>
+</body>
+</html>
