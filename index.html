@@ -1438,13 +1438,9 @@
           if (overlay) overlay.classList.remove('show');
         }
       } else {
-        if (show === undefined) {
-          sidebar.classList.toggle('collapsed');
-        } else if (show) {
-          sidebar.classList.remove('collapsed');
-        } else {
-          sidebar.classList.add('collapsed');
-        }
+        // On desktop version, always keep the sidebar visible
+        sidebar.classList.remove('collapsed');
+        if (overlay) overlay.classList.remove('show');
       }
     }
 
