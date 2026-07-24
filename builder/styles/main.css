@@ -187,7 +187,7 @@ body {
 }
 
 .menu-toggle-btn {
-  display: inline-flex;
+  display: none;
   align-items: center;
   justify-content: center;
   width: 40px;
@@ -582,6 +582,9 @@ body {
 }
 
 @media (max-width: 992px) {
+  .menu-toggle-btn {
+    display: inline-flex;
+  }
   .app-sidebar {
     position: fixed;
     top: 0;
