@@ -268,12 +268,14 @@ body {
   display: flex;
   align-items: center;
   background: #ffffff;
-  border: 1px solid #e2e8f0;
+  border: 1px solid #cbd5e1;
   border-radius: 9999px;
-  padding: 0.35rem 0.85rem;
-  width: 240px;
+  padding: 0 0.75rem;
+  width: 260px;
+  max-width: 100%;
   height: 38px;
   transition: all 0.2s ease;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
 }
 
 .search-box:focus-within {
@@ -282,9 +284,12 @@ body {
 }
 
 .search-box .search-icon {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   color: #64748b;
-  margin-right: 0.4rem;
+  margin-right: 0.3rem;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
   pointer-events: none;
 }
 
@@ -293,14 +298,18 @@ body {
   background: transparent;
   outline: none;
   width: 100%;
-  font-size: 0.84rem;
+  flex: 1;
+  min-width: 0;
+  font-size: 0.85rem;
   color: #1e293b;
   padding: 0;
   height: 100%;
+  line-height: 38px;
 }
 
 .search-box input::placeholder {
   color: #94a3b8;
+  font-size: 0.84rem;
 }
 
 /* Viewport Content */
@@ -616,7 +625,8 @@ body {
     margin-top: 0.15rem;
   }
   .search-box {
-    width: 170px;
+    width: 220px;
+    max-width: calc(100vw - 80px);
     height: 36px;
   }
   .view-mode-tabs {
