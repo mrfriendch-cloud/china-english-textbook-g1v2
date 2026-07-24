@@ -6,61 +6,111 @@
         "q": "听录音，选出你听到的单词：",
         "audio": "audio/u1_chair.mp3",
         "audioText": "chair",
-        "opts": ["chair", "desk", "blackboard", "book"],
-        "ans": 0
+        "opts": [
+          "blackboard",
+          "desk",
+          "book",
+          "chair"
+        ],
+        "ans": 3
       },
       {
         "q": "听录音，选出你听到的单词：",
         "audio": "audio/u1_desk.mp3",
         "audioText": "desk",
-        "opts": ["ruler", "desk", "pencil", "chair"],
-        "ans": 1
+        "opts": [
+          "chair",
+          "pencil",
+          "ruler",
+          "desk"
+        ],
+        "ans": 3
       },
       {
         "q": "听录音，选出你听到的单词：",
         "audio": "audio/u1_blackboard.mp3",
         "audioText": "blackboard",
-        "opts": ["blackboard", "window", "door", "desk"],
-        "ans": 0
+        "opts": [
+          "window",
+          "desk",
+          "door",
+          "blackboard"
+        ],
+        "ans": 3
       },
       {
         "q": "听录音，选出对应的中文翻译：",
         "audio": "audio/u1_under.mp3",
         "audioText": "under",
-        "opts": ["在……上面", "在……下面", "在……里面", "在……附近"],
-        "ans": 1
+        "opts": [
+          "在……下面",
+          "在……里面",
+          "在……上面",
+          "在……附近"
+        ],
+        "ans": 0
       },
       {
         "q": "听问句录音，选出正确的英文句子：",
         "audio": "audio/u1_dlg_1.mp3",
         "audioText": "Where is the cat?",
-        "opts": ["Where is the cat?", "It's on the chair.", "Put your book on the desk.", "Where is the ruler?"],
-        "ans": 0
+        "opts": [
+          "It's on the chair.",
+          "Put your book on the desk.",
+          "Where is the ruler?",
+          "Where is the cat?"
+        ],
+        "ans": 3
       },
       {
         "q": "“椅子” 的英文是：",
-        "opts": ["chair", "desk", "blackboard", "book"],
-        "ans": 0
+        "opts": [
+          "desk",
+          "book",
+          "blackboard",
+          "chair"
+        ],
+        "ans": 3
       },
       {
         "q": "“黑板” 的英文是：",
-        "opts": ["blackboard", "chair", "desk", "door"],
-        "ans": 0
+        "opts": [
+          "desk",
+          "chair",
+          "blackboard",
+          "door"
+        ],
+        "ans": 2
       },
       {
         "q": "“在……里面” 的英文介词是：",
-        "opts": ["in", "on", "under", "behind"],
-        "ans": 0
+        "opts": [
+          "on",
+          "behind",
+          "in",
+          "under"
+        ],
+        "ans": 2
       },
       {
         "q": "“猫在椅子上面。” 用英文怎么说？",
-        "opts": ["It's on the chair.", "It's under the desk.", "It's in the desk.", "It's behind the door."],
+        "opts": [
+          "It's on the chair.",
+          "It's in the desk.",
+          "It's under the desk.",
+          "It's behind the door."
+        ],
         "ans": 0
       },
       {
         "q": "“把你的书放在书桌上。” 用英文怎么说？",
-        "opts": ["Put your book on the desk.", "Where is the cat?", "It's under the chair.", "Put on your shirt."],
-        "ans": 0
+        "opts": [
+          "It's under the chair.",
+          "Put on your shirt.",
+          "Put your book on the desk.",
+          "Where is the cat?"
+        ],
+        "ans": 2
       }
     ]
   },
@@ -71,60 +121,110 @@
         "q": "听录音，选出你听到的房间物品：",
         "audio": "audio/u2_light.mp3",
         "audioText": "light",
-        "opts": ["light", "bed", "door", "box"],
-        "ans": 0
+        "opts": [
+          "door",
+          "bed",
+          "box",
+          "light"
+        ],
+        "ans": 3
       },
       {
         "q": "听录音，选出你听到的单词：",
         "audio": "audio/u2_bed.mp3",
         "audioText": "bed",
-        "opts": ["desk", "bed", "light", "chair"],
-        "ans": 1
+        "opts": [
+          "chair",
+          "light",
+          "bed",
+          "desk"
+        ],
+        "ans": 2
       },
       {
         "q": "听录音，选出对应的中文意思：",
         "audio": "audio/u2_behind.mp3",
         "audioText": "behind",
-        "opts": ["在……附近", "在……背后", "在……上面", "在……下面"],
+        "opts": [
+          "在……下面",
+          "在……背后",
+          "在……附近",
+          "在……上面"
+        ],
         "ans": 1
       },
       {
         "q": "听录音，选出你听到的问句：",
         "audio": "audio/u2_dlg_1.mp3",
         "audioText": "What's in your room?",
-        "opts": ["What's in your room?", "Where is the light?", "Where is the box?", "Is this your room?"],
-        "ans": 0
+        "opts": [
+          "Where is the box?",
+          "Is this your room?",
+          "Where is the light?",
+          "What's in your room?"
+        ],
+        "ans": 3
       },
       {
         "q": "听录音，选出听到的回答：",
         "audio": "audio/u2_dlg_6.mp3",
         "audioText": "It's behind the door.",
-        "opts": ["It's behind the door.", "It's near the window.", "A bed, a light and a desk.", "It's on the chair."],
+        "opts": [
+          "It's behind the door.",
+          "It's near the window.",
+          "It's on the chair.",
+          "A bed, a light and a desk."
+        ],
         "ans": 0
       },
       {
         "q": "“灯” 的英文单词是：",
-        "opts": ["light", "bed", "door", "box"],
-        "ans": 0
+        "opts": [
+          "box",
+          "light",
+          "door",
+          "bed"
+        ],
+        "ans": 1
       },
       {
         "q": "“盒子，箱子” 的英文单词是：",
-        "opts": ["box", "bed", "door", "chair"],
-        "ans": 0
+        "opts": [
+          "bed",
+          "chair",
+          "door",
+          "box"
+        ],
+        "ans": 3
       },
       {
         "q": "“在……附近” 的英文介词是：",
-        "opts": ["near", "behind", "under", "in"],
-        "ans": 0
+        "opts": [
+          "behind",
+          "in",
+          "near",
+          "under"
+        ],
+        "ans": 2
       },
       {
         "q": "“灯在窗户附近。” 英文怎么表达？",
-        "opts": ["It's near the window.", "It's behind the door.", "What's in your room?", "A bed and a light."],
-        "ans": 0
+        "opts": [
+          "A bed and a light.",
+          "What's in your room?",
+          "It's behind the door.",
+          "It's near the window."
+        ],
+        "ans": 3
       },
       {
         "q": "“你的房间里有什么？” 英文怎么表达？",
-        "opts": ["What's in your room?", "Where is the box?", "Is it behind the door?", "What do you want?"],
+        "opts": [
+          "What's in your room?",
+          "Where is the box?",
+          "Is it behind the door?",
+          "What do you want?"
+        ],
         "ans": 0
       }
     ]
@@ -136,60 +236,110 @@
         "q": "听录音，选出你听到的玩具单词：",
         "audio": "audio/u3_plane.mp3",
         "audioText": "plane",
-        "opts": ["plane", "ball", "car", "train"],
+        "opts": [
+          "plane",
+          "car",
+          "train",
+          "ball"
+        ],
         "ans": 0
       },
       {
         "q": "听录音，选出你听到的玩具：",
         "audio": "audio/u3_bear.mp3",
         "audioText": "bear",
-        "opts": ["doll", "bear", "car", "train"],
-        "ans": 1
+        "opts": [
+          "doll",
+          "train",
+          "car",
+          "bear"
+        ],
+        "ans": 3
       },
       {
         "q": "听录音，选出你听到的答语：",
         "audio": "audio/u3_dlg_2.mp3",
         "audioText": "Sure. Here you are.",
-        "opts": ["Sure. Here you are.", "Sorry, no.", "I have a bear.", "Can I have a car?"],
-        "ans": 0
+        "opts": [
+          "Sorry, no.",
+          "Can I have a car?",
+          "I have a bear.",
+          "Sure. Here you are."
+        ],
+        "ans": 3
       },
       {
         "q": "听录音，选出对应的请求句：",
         "audio": "audio/u3_dlg_1.mp3",
         "audioText": "Can I have a car?",
-        "opts": ["Can I have a car?", "Can I have a plane?", "I have a bear.", "Where is the car?"],
-        "ans": 0
+        "opts": [
+          "I have a bear.",
+          "Where is the car?",
+          "Can I have a car?",
+          "Can I have a plane?"
+        ],
+        "ans": 2
       },
       {
         "q": "听录音，选出抱歉的礼貌用语：",
         "audio": "audio/u3_dlg_4.mp3",
         "audioText": "Sorry, no.",
-        "opts": ["Sorry, no.", "Sure. Here you are.", "Thank you.", "Thanks."],
-        "ans": 0
+        "opts": [
+          "Thank you.",
+          "Sorry, no.",
+          "Sure. Here you are.",
+          "Thanks."
+        ],
+        "ans": 1
       },
       {
         "q": "“飞机” 的英文单词是：",
-        "opts": ["plane", "train", "car", "ball"],
-        "ans": 0
+        "opts": [
+          "train",
+          "ball",
+          "plane",
+          "car"
+        ],
+        "ans": 2
       },
       {
         "q": "“小汽车” 的英文单词是：",
-        "opts": ["car", "plane", "train", "bear"],
-        "ans": 0
+        "opts": [
+          "bear",
+          "train",
+          "plane",
+          "car"
+        ],
+        "ans": 3
       },
       {
         "q": "“我可以要辆小汽车吗？” 英文表达为：",
-        "opts": ["Can I have a car?", "Can I have a plane?", "I have a car.", "Where is the car?"],
-        "ans": 0
+        "opts": [
+          "Can I have a plane?",
+          "Where is the car?",
+          "Can I have a car?",
+          "I have a car."
+        ],
+        "ans": 2
       },
       {
         "q": "“当然可以，给你。” 英文表达为：",
-        "opts": ["Sure. Here you are.", "Sorry, no.", "Thank you.", "Yes, I do."],
-        "ans": 0
+        "opts": [
+          "Yes, I do.",
+          "Sorry, no.",
+          "Sure. Here you are.",
+          "Thank you."
+        ],
+        "ans": 2
       },
       {
         "q": "“我有一只玩具熊。” 英文表达为：",
-        "opts": ["I have a bear.", "Can I have a bear?", "I want a bear.", "This is my bear."],
+        "opts": [
+          "I have a bear.",
+          "Can I have a bear?",
+          "I want a bear.",
+          "This is my bear."
+        ],
         "ans": 0
       }
     ]
@@ -201,61 +351,111 @@
         "q": "听录音，选出你听到的食物：",
         "audio": "audio/u4_rice.mp3",
         "audioText": "rice",
-        "opts": ["rice", "noodles", "vegetable", "fish"],
-        "ans": 0
+        "opts": [
+          "vegetable",
+          "rice",
+          "fish",
+          "noodles"
+        ],
+        "ans": 1
       },
       {
         "q": "听录音，选出你听到的食物：",
         "audio": "audio/u4_noodles.mp3",
         "audioText": "noodles",
-        "opts": ["chicken", "noodles", "egg", "fish"],
-        "ans": 1
+        "opts": [
+          "chicken",
+          "fish",
+          "egg",
+          "noodles"
+        ],
+        "ans": 3
       },
       {
         "q": "听录音，选出对应的英文表达：",
         "audio": "audio/u4_dlg_1.mp3",
         "audioText": "I'm hungry.",
-        "opts": ["I'm hungry.", "I'm thirsty.", "I want rice.", "Do you like fish?"],
+        "opts": [
+          "I'm hungry.",
+          "I'm thirsty.",
+          "I want rice.",
+          "Do you like fish?"
+        ],
         "ans": 0
       },
       {
         "q": "听录音，选出你听到的句子：",
         "audio": "audio/u4_dlg_2.mp3",
         "audioText": "I want rice and chicken.",
-        "opts": ["I want rice and chicken.", "I want noodles.", "I want fish and eggs.", "Do you like chicken?"],
-        "ans": 0
+        "opts": [
+          "I want noodles.",
+          "Do you like chicken?",
+          "I want rice and chicken.",
+          "I want fish and eggs."
+        ],
+        "ans": 2
       },
       {
         "q": "听录音，选出你听到的问句：",
         "audio": "audio/u4_dlg_5.mp3",
         "audioText": "Do you like fish?",
-        "opts": ["Do you like fish?", "What do you want?", "I'm hungry.", "Can I have some fish?"],
-        "ans": 0
+        "opts": [
+          "What do you want?",
+          "I'm hungry.",
+          "Do you like fish?",
+          "Can I have some fish?"
+        ],
+        "ans": 2
       },
       {
         "q": "“面条” 的英文单词是：",
-        "opts": ["noodles", "rice", "vegetable", "chicken"],
-        "ans": 0
+        "opts": [
+          "rice",
+          "vegetable",
+          "chicken",
+          "noodles"
+        ],
+        "ans": 3
       },
       {
         "q": "“饥饿的” 英文单词是：",
-        "opts": ["hungry", "thirsty", "sorry", "sure"],
-        "ans": 0
+        "opts": [
+          "thirsty",
+          "hungry",
+          "sorry",
+          "sure"
+        ],
+        "ans": 1
       },
       {
         "q": "“我想吃米饭和鸡肉。” 英文表达为：",
-        "opts": ["I want rice and chicken.", "I want noodles and eggs.", "I like fish.", "I'm hungry."],
+        "opts": [
+          "I want rice and chicken.",
+          "I like fish.",
+          "I want noodles and eggs.",
+          "I'm hungry."
+        ],
         "ans": 0
       },
       {
         "q": "“你想要什么？” 英文表达为：",
-        "opts": ["What do you want?", "Do you like fish?", "Where is the food?", "What's in your room?"],
-        "ans": 0
+        "opts": [
+          "Do you like fish?",
+          "What do you want?",
+          "What's in your room?",
+          "Where is the food?"
+        ],
+        "ans": 1
       },
       {
         "q": "“你喜欢鱼肉吗？” 英文表达为：",
-        "opts": ["Do you like fish?", "Do you like chicken?", "I like fish.", "Yes, I do."],
-        "ans": 0
+        "opts": [
+          "Yes, I do.",
+          "Do you like chicken?",
+          "I like fish.",
+          "Do you like fish?"
+        ],
+        "ans": 3
       }
     ]
   },
@@ -266,61 +466,111 @@
         "q": "听录音，选出你听到的饮品：",
         "audio": "audio/u5_juice.mp3",
         "audioText": "juice",
-        "opts": ["juice", "tea", "milk", "water"],
-        "ans": 0
+        "opts": [
+          "water",
+          "tea",
+          "juice",
+          "milk"
+        ],
+        "ans": 2
       },
       {
         "q": "听录音，选出你听到的单词：",
         "audio": "audio/u5_milk.mp3",
         "audioText": "milk",
-        "opts": ["water", "milk", "tea", "juice"],
+        "opts": [
+          "tea",
+          "milk",
+          "water",
+          "juice"
+        ],
         "ans": 1
       },
       {
         "q": "听录音，选出你听到的状态形容词：",
         "audio": "audio/u5_thirsty.mp3",
         "audioText": "thirsty",
-        "opts": ["thirsty", "hungry", "thanks", "water"],
-        "ans": 0
+        "opts": [
+          "water",
+          "hungry",
+          "thanks",
+          "thirsty"
+        ],
+        "ans": 3
       },
       {
         "q": "听录音，选出你听到的表达：",
         "audio": "audio/u5_dlg_2.mp3",
         "audioText": "I want water.",
-        "opts": ["I want water.", "I'm thirsty.", "Can I have some milk?", "Here you are."],
-        "ans": 0
+        "opts": [
+          "Here you are.",
+          "I want water.",
+          "Can I have some milk?",
+          "I'm thirsty."
+        ],
+        "ans": 1
       },
       {
         "q": "听录音，选出你听到的请求句：",
         "audio": "audio/u5_dlg_3.mp3",
         "audioText": "Can I have some milk?",
-        "opts": ["Can I have some milk?", "I want water.", "Here you are.", "Thanks."],
-        "ans": 0
+        "opts": [
+          "I want water.",
+          "Can I have some milk?",
+          "Thanks.",
+          "Here you are."
+        ],
+        "ans": 1
       },
       {
         "q": "“果汁” 的英文单词是：",
-        "opts": ["juice", "tea", "milk", "water"],
-        "ans": 0
+        "opts": [
+          "milk",
+          "juice",
+          "water",
+          "tea"
+        ],
+        "ans": 1
       },
       {
         "q": "“口渴的” 英文单词是：",
-        "opts": ["thirsty", "hungry", "sorry", "sure"],
-        "ans": 0
+        "opts": [
+          "sure",
+          "hungry",
+          "sorry",
+          "thirsty"
+        ],
+        "ans": 3
       },
       {
         "q": "“我想喝水。” 英文表达为：",
-        "opts": ["I want water.", "I'm thirsty.", "Can I have some milk?", "Thanks."],
-        "ans": 0
+        "opts": [
+          "I'm thirsty.",
+          "Can I have some milk?",
+          "I want water.",
+          "Thanks."
+        ],
+        "ans": 2
       },
       {
         "q": "“我可以喝点牛奶吗？” 英文表达为：",
-        "opts": ["Can I have some milk?", "Can I have a car?", "I want milk.", "Do you like milk?"],
-        "ans": 0
+        "opts": [
+          "Do you like milk?",
+          "Can I have some milk?",
+          "Can I have a car?",
+          "I want milk."
+        ],
+        "ans": 1
       },
       {
         "q": "“给你。” 英文表达为：",
-        "opts": ["Here you are.", "Sure.", "Thanks.", "Thank you."],
-        "ans": 0
+        "opts": [
+          "Sure.",
+          "Thanks.",
+          "Thank you.",
+          "Here you are."
+        ],
+        "ans": 3
       }
     ]
   },
@@ -331,61 +581,111 @@
         "q": "听录音，选出你听到的服装：",
         "audio": "audio/u6_shirt.mp3",
         "audioText": "shirt",
-        "opts": ["shirt", "T-shirt", "skirt", "dress"],
-        "ans": 0
+        "opts": [
+          "dress",
+          "T-shirt",
+          "skirt",
+          "shirt"
+        ],
+        "ans": 3
       },
       {
         "q": "听录音，选出你听到的服装：",
         "audio": "audio/u6_skirt.mp3",
         "audioText": "skirt",
-        "opts": ["dress", "skirt", "socks", "shorts"],
-        "ans": 1
+        "opts": [
+          "skirt",
+          "shorts",
+          "socks",
+          "dress"
+        ],
+        "ans": 0
       },
       {
         "q": "听录音，选出听到的指令句：",
         "audio": "audio/u6_dlg_1.mp3",
         "audioText": "Put on your shirt.",
-        "opts": ["Put on your shirt.", "Take off your socks.", "I like your dress.", "Is this your T-shirt?"],
+        "opts": [
+          "Put on your shirt.",
+          "Is this your T-shirt?",
+          "I like your dress.",
+          "Take off your socks."
+        ],
         "ans": 0
       },
       {
         "q": "听录音，选出听到的夸赞表达：",
         "audio": "audio/u6_dlg_3.mp3",
         "audioText": "I like your dress.",
-        "opts": ["I like your dress.", "Thank you.", "Put on your shirt.", "Take off your socks."],
+        "opts": [
+          "I like your dress.",
+          "Put on your shirt.",
+          "Take off your socks.",
+          "Thank you."
+        ],
         "ans": 0
       },
       {
         "q": "听录音，选出听到的问句：",
         "audio": "audio/u6_dlg_5.mp3",
         "audioText": "Is this your T-shirt?",
-        "opts": ["Is this your T-shirt?", "Put on your shirt.", "Yes, it is.", "Thank you."],
-        "ans": 0
+        "opts": [
+          "Thank you.",
+          "Is this your T-shirt?",
+          "Yes, it is.",
+          "Put on your shirt."
+        ],
+        "ans": 1
       },
       {
         "q": "“连衣裙” 的英文单词是：",
-        "opts": ["dress", "skirt", "shirt", "shorts"],
+        "opts": [
+          "dress",
+          "shorts",
+          "skirt",
+          "shirt"
+        ],
         "ans": 0
       },
       {
         "q": "“短裤” 的英文单词是：",
-        "opts": ["shorts", "socks", "skirt", "shirt"],
+        "opts": [
+          "shorts",
+          "socks",
+          "skirt",
+          "shirt"
+        ],
         "ans": 0
       },
       {
         "q": "“穿上你的衬衫。” 英文表达为：",
-        "opts": ["Put on your shirt.", "Take off your socks.", "I like your dress.", "Is this your T-shirt?"],
-        "ans": 0
+        "opts": [
+          "Take off your socks.",
+          "I like your dress.",
+          "Is this your T-shirt?",
+          "Put on your shirt."
+        ],
+        "ans": 3
       },
       {
         "q": "“脱下你的短袜。” 英文表达为：",
-        "opts": ["Take off your socks.", "Put on your shirt.", "I like your dress.", "Thank you."],
-        "ans": 0
+        "opts": [
+          "I like your dress.",
+          "Thank you.",
+          "Put on your shirt.",
+          "Take off your socks."
+        ],
+        "ans": 3
       },
       {
         "q": "“这是你的T恤衫吗？” 英文表达为：",
-        "opts": ["Is this your T-shirt?", "Is this your dress?", "Put on your T-shirt.", "I like your T-shirt."],
-        "ans": 0
+        "opts": [
+          "I like your T-shirt.",
+          "Is this your T-shirt?",
+          "Put on your T-shirt.",
+          "Is this your dress?"
+        ],
+        "ans": 1
       }
     ]
   }
