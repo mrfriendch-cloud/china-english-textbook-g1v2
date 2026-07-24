@@ -98,35 +98,33 @@
     <main class="app-main">
       <!-- Top Navigation Header -->
       <header class="top-bar">
-        <div class="top-bar-main">
-          <div class="top-bar-brand">
-            <button class="menu-toggle-btn" onclick="toggleSidebar()" aria-label="切换菜单" title="切换侧边栏">
-              <span>☰</span>
-            </button>
-            <div class="header-book-title">
-              <span class="book-title-main">英语 一年级下册</span>
-              <span class="book-title-sub">义务教育教科书（一年级起点）</span>
+        <div class="top-bar-container">
+          <div class="top-bar-header">
+            <div class="top-bar-brand">
+              <button class="menu-toggle-btn" onclick="toggleSidebar()" aria-label="切换菜单" title="切换侧边栏">
+                <span>☰</span>
+              </button>
+              <div class="header-book-title">
+                <span class="book-title-main">英语 一年级下册</span>
+              </div>
             </div>
-          </div>
-
-          <div class="top-bar-center">
-            <div class="view-mode-tabs">
-              <button id="tab-interactive" class="view-tab active" onclick="setViewMode('interactive')">
-                <span>📚 互动课程</span>
-              </button>
-              <button id="tab-pageview" class="view-tab" onclick="setViewMode('pageview')">
-                <span>📖 原版全页</span>
-              </button>
-              <button id="tab-vocab" class="view-tab" onclick="setViewMode('vocab')">
-                <span>🗂️ 词汇卡片</span>
-              </button>
-            </div>
-          </div>
-
-          <div class="top-bar-right">
             <div class="search-box">
               <span class="search-icon">🔍</span>
-              <input type="text" id="searchInput" placeholder="搜索单词、句子或中文..." oninput="handleSearch()">
+              <input type="text" id="searchInput" placeholder="搜索课文、单词..." oninput="handleSearch()">
+            </div>
+          </div>
+
+          <div class="top-bar-tabs-row">
+            <div class="view-mode-tabs">
+              <button id="tab-interactive" class="view-tab active" onclick="setViewMode('interactive')">
+                <span>💡 互动课程</span>
+              </button>
+              <button id="tab-pageview" class="view-tab" onclick="setViewMode('pageview')">
+                <span>📄 原版全页</span>
+              </button>
+              <button id="tab-vocab" class="view-tab" onclick="setViewMode('vocab')">
+                <span>🎴 词汇卡片</span>
+              </button>
             </div>
           </div>
         </div>
