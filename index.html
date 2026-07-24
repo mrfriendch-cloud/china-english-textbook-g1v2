@@ -98,15 +98,13 @@
     <main class="app-main">
       <!-- Top Navigation Header -->
       <header class="top-bar">
-        <div class="top-bar-container">
-          <div class="top-bar-header">
-            <div class="top-bar-brand">
-              <button class="menu-toggle-btn" onclick="toggleSidebar()" aria-label="切换菜单" title="切换侧边栏">
-                <span>☰</span>
-              </button>
-              <div class="header-book-title">
-                <span class="book-title-main">英语 一年级下册</span>
-              </div>
+        <div class="top-bar-main">
+          <div class="top-bar-left">
+            <button class="menu-toggle-btn" onclick="toggleSidebar()" aria-label="切换菜单" title="切换侧边栏">
+              <span>☰</span>
+            </button>
+            <div class="header-book-title">
+              <span class="book-title-main">英语 一年级下册</span>
             </div>
             <div class="search-box">
               <span class="search-icon">🔍</span>
@@ -114,7 +112,7 @@
             </div>
           </div>
 
-          <div class="top-bar-tabs-row">
+          <div class="top-bar-right">
             <div class="view-mode-tabs">
               <button id="tab-interactive" class="view-tab active" onclick="setViewMode('interactive')">
                 <span>💡 互动课程</span>
