@@ -567,7 +567,7 @@ body {
     display: inline-flex;
   }
   .header-book-title {
-    display: flex;
+    display: none;
   }
   .app-sidebar {
     position: fixed;
@@ -588,26 +588,40 @@ body {
     height: auto;
   }
   .top-bar-main {
-    flex-direction: column;
-    align-items: stretch;
-    padding: 0.65rem 1rem;
-    gap: 0.6rem;
-  }
-  .top-bar-left {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+    padding: 0.65rem 1rem;
+    gap: 0.65rem;
     width: 100%;
+  }
+  .top-bar-left {
+    order: 1;
+    display: flex;
+    align-items: center;
   }
   .top-bar-right {
+    order: 2;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .top-bar-center {
+    order: 3;
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0.15rem;
   }
   .search-box {
-    width: 160px;
-    height: 34px;
+    width: 170px;
+    height: 36px;
   }
   .view-mode-tabs {
     width: 100%;
+    max-width: 500px;
   }
   .view-tab {
     flex: 1;
