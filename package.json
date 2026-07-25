@@ -2,7 +2,6 @@
   "name": "china-english-textbook-app",
   "version": "1.0.0",
   "description": "Digitized English Textbook App Template",
-  "main": "server.js",
   "type": "module",
   "scripts": {
     "start": "node server.js",
