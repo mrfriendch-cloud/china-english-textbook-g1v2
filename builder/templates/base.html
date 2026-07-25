@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/styles.css?v=4">
 </head>
 <body>
   <!-- Mobile Sidebar Backdrop Overlay -->
@@ -99,14 +99,23 @@
       <!-- Top Navigation Header -->
       <header class="top-bar">
         <div class="top-bar-main">
-          <div class="top-bar-left">
-            <button class="menu-toggle-btn" onclick="toggleSidebar()" aria-label="切换菜单" title="切换侧边栏">
-              <span>☰</span>
-            </button>
-            <div class="header-book-title">
-              <span class="book-title-main">英语 一年级下册</span>
+          <div class="top-bar-row1">
+            <div class="top-bar-left">
+              <button class="menu-toggle-btn" onclick="toggleSidebar()" aria-label="切换菜单" title="切换侧边栏">
+                <span>☰</span>
+              </button>
+              <div class="header-book-title">
+                <span class="book-title-main">英语一年级下册</span>
+              </div>
+            </div>
+
+          <div class="top-bar-right">
+            <div class="search-box">
+              <span class="search-icon">🔍</span>
+              <input type="text" id="searchInput" placeholder="搜索课文、单词" oninput="handleSearch()">
             </div>
           </div>
+          </div><!-- /.top-bar-row1 -->
 
           <div class="top-bar-center">
             <div class="view-mode-tabs">
@@ -119,13 +128,6 @@
               <button id="tab-vocab" class="view-tab" onclick="setViewMode('vocab')">
                 <span>🎴 词汇卡片</span>
               </button>
-            </div>
-          </div>
-
-          <div class="top-bar-right">
-            <div class="search-box">
-              <span class="search-icon">🔍</span>
-              <input type="text" id="searchInput" placeholder="搜索课文、单词..." oninput="handleSearch()">
             </div>
           </div>
         </div>
@@ -152,7 +154,7 @@
 
             <div class="pageview-grid">
               <div class="page-image-container">
-                <img id="pdfPageImage" src="images/pages/page_01.webp" alt="Textbook Page" class="textbook-page-img">
+                <img id="pdfPageImage" src="images/pages/page_01.webp" alt="Textbook Page" class="textbook-page-img" decoding="async">
               </div>
               <div class="page-text-sidebar">
                 <h3 id="pageTranscriptTitle" class="transcript-header">第 1 页 文本内容</h3>
@@ -433,8 +435,9 @@
       }
     }
 
-    // Cached DOM Text Search Index
+    // Cached DOM Text Search Index & Debounced Search Handler
     let searchIndexCache = null;
+    let searchDebounceTimer = null;
 
     function getSearchIndex() {
       if (!searchIndexCache) {
@@ -447,20 +450,25 @@
     }
 
     function handleSearch() {
-      const q = document.getElementById('searchInput').value.toLowerCase().trim();
-      const index = getSearchIndex();
+      clearTimeout(searchDebounceTimer);
+      searchDebounceTimer = setTimeout(() => {
+        const q = document.getElementById('searchInput').value.toLowerCase().trim();
+        const index = getSearchIndex();
 
-      if (!q) {
-        index.forEach(item => item.element.style.display = '');
-        return;
-      }
+        requestAnimationFrame(() => {
+          if (!q) {
+            index.forEach(item => item.element.style.display = '');
+            return;
+          }
 
-      setViewMode('interactive');
-      document.querySelectorAll('.unit-section').forEach(sec => sec.style.display = 'block');
+          setViewMode('interactive');
+          document.querySelectorAll('.unit-section').forEach(sec => sec.style.display = 'block');
 
-      index.forEach(item => {
-        item.element.style.display = item.text.includes(q) ? '' : 'none';
-      });
+          index.forEach(item => {
+            item.element.style.display = item.text.includes(q) ? '' : 'none';
+          });
+        });
+      }, 150);
     }
 
     // ===== QUIZ ENGINE =====

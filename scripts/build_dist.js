@@ -28,7 +28,7 @@ function copyRecursiveSync(src, dest) {
     }
 }
 
-const itemsToCopy = ['index.html', 'css', 'images', 'image', 'audio', 'pdf_structure.json', 'vercel.json', 'netlify.toml'];
+const itemsToCopy = ['index.html', 'css', 'images', 'audio', 'pdf_structure.json', 'vercel.json', 'netlify.toml'];
 
 itemsToCopy.forEach(item => {
     const srcPath = path.join(projectRoot, item);

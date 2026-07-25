@@ -173,10 +173,29 @@ body {
   width: 100%;
 }
 
+.top-bar-row1 {
+  display: contents;
+}
+
 .top-bar-left {
+  grid-column: 1;
   display: flex;
   align-items: center;
   gap: 1rem;
+}
+
+.top-bar-center {
+  grid-column: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.top-bar-right {
+  grid-column: 3;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 .menu-toggle-btn {
@@ -576,7 +595,15 @@ body {
     display: inline-flex;
   }
   .header-book-title {
-    display: none;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+  }
+  .header-book-title .book-title-main {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #0f172a;
+    white-space: nowrap;
   }
   .app-sidebar {
     position: fixed;
@@ -596,22 +623,42 @@ body {
     grid-template-columns: 1fr;
     height: auto;
   }
+  .top-bar {
+    padding: 0.6rem 0.75rem;
+  }
   .top-bar-main {
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0.65rem 1rem;
-    gap: 0.65rem;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0;
     width: 100%;
   }
-  .top-bar-left {
-    order: 1;
+  .top-bar-row1 {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    width: 100%;
+    min-width: 0;
+  }
+  .top-bar-left {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    flex-shrink: 0;
+  }
+  .header-book-title {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+  }
+  .header-book-title .book-title-main {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #0f172a;
+    white-space: nowrap;
   }
   .top-bar-right {
-    order: 2;
     flex: 1;
     min-width: 0;
     display: flex;
@@ -620,24 +667,27 @@ body {
   }
   .search-box {
     width: 100%;
-    max-width: 280px;
+    max-width: 100%;
     height: 36px;
-    padding: 0 0.55rem;
+    padding: 0 0.6rem;
   }
   .search-box .search-icon {
-    font-size: 0.8rem;
-    margin-right: 0.18rem;
+    font-size: 0.82rem;
+    margin-right: 0.25rem;
+    flex-shrink: 0;
   }
   .search-box input {
     font-size: 0.82rem;
+    width: 100%;
+    flex: 1;
+    min-width: 0;
+    color: #1e293b;
   }
   .top-bar-center {
-    order: 3;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 0.15rem;
   }
   .view-mode-tabs {
     width: 100%;
@@ -1149,30 +1199,57 @@ body {
 
 /* Responsive Mobile Layout (<= 640px) */
 @media (max-width: 640px) {
-  .top-bar-main {
+  .top-bar {
     padding: 0.5rem 0.75rem;
-    gap: 0.5rem;
+  }
+  .top-bar-main {
+    padding: 0;
+    gap: 0.35rem;
+  }
+  .top-bar-left {
+    gap: 0.35rem;
   }
   .menu-toggle-btn {
-    width: 36px;
-    height: 36px;
-    font-size: 1.1rem;
+    width: 34px;
+    height: 34px;
+    font-size: 1.05rem;
     border-radius: 8px;
+    flex-shrink: 0;
+    margin-left: 0;
+  }
+  .header-book-title {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    flex-shrink: 0;
   }
   .header-book-title .book-title-sub {
     display: none;
   }
   .header-book-title .book-title-main {
-    font-size: 0.88rem;
+    font-size: 0.85rem;
+    white-space: nowrap;
   }
   .search-box {
-    width: 150px;
+    width: 100%;
+    max-width: 100%;
+    height: 36px;
+    padding: 0 0.55rem;
+    margin-left: 0;
+  }
+  .search-box .search-icon {
+    font-size: 0.82rem;
+    margin-right: 0.25rem;
+    flex-shrink: 0;
   }
   .search-box input {
-    padding-left: 1.8rem;
-    padding-right: 0.5rem;
-    font-size: 0.78rem;
-    height: 34px;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 0.82rem;
+    height: 100%;
+    width: 100%;
+    flex: 1;
+    min-width: 0;
   }
   .view-tab {
     padding: 0.38rem 0.35rem;
@@ -1224,8 +1301,26 @@ body {
 }
 
 @media (max-width: 420px) {
+  .top-bar {
+    padding: 0.5rem 0.5rem;
+  }
+  .content-viewport {
+    padding: 0.75rem 0.5rem;
+  }
+  .top-bar-left {
+    gap: 0.25rem;
+  }
+  .header-book-title .book-title-main {
+    font-size: 0.8rem;
+  }
   .search-box {
-    width: 125px;
+    width: 100%;
+    height: 36px;
+    padding: 0 0.45rem;
+    margin-left: 0;
+  }
+  .search-box input {
+    font-size: 0.8rem;
   }
 }
 

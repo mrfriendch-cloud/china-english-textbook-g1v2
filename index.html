@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/styles.css?v=4">
 </head>
 <body>
   <!-- Mobile Sidebar Backdrop Overlay -->
@@ -99,14 +99,23 @@
       <!-- Top Navigation Header -->
       <header class="top-bar">
         <div class="top-bar-main">
-          <div class="top-bar-left">
-            <button class="menu-toggle-btn" onclick="toggleSidebar()" aria-label="切换菜单" title="切换侧边栏">
-              <span>☰</span>
-            </button>
-            <div class="header-book-title">
-              <span class="book-title-main">英语 一年级下册</span>
+          <div class="top-bar-row1">
+            <div class="top-bar-left">
+              <button class="menu-toggle-btn" onclick="toggleSidebar()" aria-label="切换菜单" title="切换侧边栏">
+                <span>☰</span>
+              </button>
+              <div class="header-book-title">
+                <span class="book-title-main">英语一年级下册</span>
+              </div>
+            </div>
+
+          <div class="top-bar-right">
+            <div class="search-box">
+              <span class="search-icon">🔍</span>
+              <input type="text" id="searchInput" placeholder="搜索课文、单词" oninput="handleSearch()">
             </div>
           </div>
+          </div><!-- /.top-bar-row1 -->
 
           <div class="top-bar-center">
             <div class="view-mode-tabs">
@@ -119,13 +128,6 @@
               <button id="tab-vocab" class="view-tab" onclick="setViewMode('vocab')">
                 <span>🎴 词汇卡片</span>
               </button>
-            </div>
-          </div>
-
-          <div class="top-bar-right">
-            <div class="search-box">
-              <span class="search-icon">🔍</span>
-              <input type="text" id="searchInput" placeholder="搜索课文、单词..." oninput="handleSearch()">
             </div>
           </div>
         </div>
@@ -240,35 +242,35 @@
             </div>
             <div class="unit-page-gallery" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 0.85rem;">
               <div class="page-thumb-card" onclick="jumpToPage(6)" title="点击跳转至第 6 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
-                <img src="images/pages/page_06.webp" alt="Page 6" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_06.webp'">
+                <img src="images/pages/page_06.webp" alt="Page 6" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;">
                 <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 6 页 📄</div>
               </div>
               <div class="page-thumb-card" onclick="jumpToPage(7)" title="点击跳转至第 7 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
-                <img src="images/pages/page_07.webp" alt="Page 7" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_07.webp'">
+                <img src="images/pages/page_07.webp" alt="Page 7" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;">
                 <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 7 页 📄</div>
               </div>
               <div class="page-thumb-card" onclick="jumpToPage(8)" title="点击跳转至第 8 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
-                <img src="images/pages/page_08.webp" alt="Page 8" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_08.webp'">
+                <img src="images/pages/page_08.webp" alt="Page 8" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;">
                 <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 8 页 📄</div>
               </div>
               <div class="page-thumb-card" onclick="jumpToPage(9)" title="点击跳转至第 9 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
-                <img src="images/pages/page_09.webp" alt="Page 9" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_09.webp'">
+                <img src="images/pages/page_09.webp" alt="Page 9" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;">
                 <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 9 页 📄</div>
               </div>
               <div class="page-thumb-card" onclick="jumpToPage(10)" title="点击跳转至第 10 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
-                <img src="images/pages/page_10.webp" alt="Page 10" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_10.webp'">
+                <img src="images/pages/page_10.webp" alt="Page 10" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;">
                 <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 10 页 📄</div>
               </div>
               <div class="page-thumb-card" onclick="jumpToPage(11)" title="点击跳转至第 11 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
-                <img src="images/pages/page_11.webp" alt="Page 11" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_11.webp'">
+                <img src="images/pages/page_11.webp" alt="Page 11" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;">
                 <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 11 页 📄</div>
               </div>
               <div class="page-thumb-card" onclick="jumpToPage(12)" title="点击跳转至第 12 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
-                <img src="images/pages/page_12.webp" alt="Page 12" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_12.webp'">
+                <img src="images/pages/page_12.webp" alt="Page 12" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;">
                 <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 12 页 📄</div>
               </div>
               <div class="page-thumb-card" onclick="jumpToPage(13)" title="点击跳转至第 13 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
-                <img src="images/pages/page_13.webp" alt="Page 13" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_13.webp'">
+                <img src="images/pages/page_13.webp" alt="Page 13" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;">
                 <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 13 页 📄</div>
               </div>
             </div>
@@ -399,35 +401,35 @@
             </div>
             <div class="unit-page-gallery" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 0.85rem;">
               <div class="page-thumb-card" onclick="jumpToPage(14)" title="点击跳转至第 14 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
-                <img src="images/pages/page_14.webp" alt="Page 14" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_14.webp'">
+                <img src="images/pages/page_14.webp" alt="Page 14" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;">
                 <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 14 页 📄</div>
               </div>
               <div class="page-thumb-card" onclick="jumpToPage(15)" title="点击跳转至第 15 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
-                <img src="images/pages/page_15.webp" alt="Page 15" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_15.webp'">
+                <img src="images/pages/page_15.webp" alt="Page 15" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;">
                 <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 15 页 📄</div>
               </div>
               <div class="page-thumb-card" onclick="jumpToPage(16)" title="点击跳转至第 16 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
-                <img src="images/pages/page_16.webp" alt="Page 16" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_16.webp'">
+                <img src="images/pages/page_16.webp" alt="Page 16" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;">
                 <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 16 页 📄</div>
               </div>
               <div class="page-thumb-card" onclick="jumpToPage(17)" title="点击跳转至第 17 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
-                <img src="images/pages/page_17.webp" alt="Page 17" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_17.webp'">
+                <img src="images/pages/page_17.webp" alt="Page 17" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;">
                 <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 17 页 📄</div>
               </div>
               <div class="page-thumb-card" onclick="jumpToPage(18)" title="点击跳转至第 18 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
-                <img src="images/pages/page_18.webp" alt="Page 18" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_18.webp'">
+                <img src="images/pages/page_18.webp" alt="Page 18" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;">
                 <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 18 页 📄</div>
               </div>
               <div class="page-thumb-card" onclick="jumpToPage(19)" title="点击跳转至第 19 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
-                <img src="images/pages/page_19.webp" alt="Page 19" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_19.webp'">
+                <img src="images/pages/page_19.webp" alt="Page 19" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;">
                 <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 19 页 📄</div>
               </div>
               <div class="page-thumb-card" onclick="jumpToPage(20)" title="点击跳转至第 20 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
-                <img src="images/pages/page_20.webp" alt="Page 20" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_20.webp'">
+                <img src="images/pages/page_20.webp" alt="Page 20" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;">
                 <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 20 页 📄</div>
               </div>
               <div class="page-thumb-card" onclick="jumpToPage(21)" title="点击跳转至第 21 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
-                <img src="images/pages/page_21.webp" alt="Page 21" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_21.webp'">
+                <img src="images/pages/page_21.webp" alt="Page 21" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;">
                 <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 21 页 📄</div>
               </div>
             </div>
@@ -558,35 +560,35 @@
             </div>
             <div class="unit-page-gallery" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 0.85rem;">
               <div class="page-thumb-card" onclick="jumpToPage(22)" title="点击跳转至第 22 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
-                <img src="images/pages/page_22.webp" alt="Page 22" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_22.webp'">
+                <img src="images/pages/page_22.webp" alt="Page 22" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;">
                 <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 22 页 📄</div>
               </div>
               <div class="page-thumb-card" onclick="jumpToPage(23)" title="点击跳转至第 23 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
-                <img src="images/pages/page_23.webp" alt="Page 23" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_23.webp'">
+                <img src="images/pages/page_23.webp" alt="Page 23" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;">
                 <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 23 页 📄</div>
               </div>
               <div class="page-thumb-card" onclick="jumpToPage(24)" title="点击跳转至第 24 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
-                <img src="images/pages/page_24.webp" alt="Page 24" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_24.webp'">
+                <img src="images/pages/page_24.webp" alt="Page 24" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;">
                 <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 24 页 📄</div>
               </div>
               <div class="page-thumb-card" onclick="jumpToPage(25)" title="点击跳转至第 25 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
-                <img src="images/pages/page_25.webp" alt="Page 25" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_25.webp'">
+                <img src="images/pages/page_25.webp" alt="Page 25" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;">
                 <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 25 页 📄</div>
               </div>
               <div class="page-thumb-card" onclick="jumpToPage(26)" title="点击跳转至第 26 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
-                <img src="images/pages/page_26.webp" alt="Page 26" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_26.webp'">
+                <img src="images/pages/page_26.webp" alt="Page 26" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;">
                 <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 26 页 📄</div>
               </div>
               <div class="page-thumb-card" onclick="jumpToPage(27)" title="点击跳转至第 27 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
-                <img src="images/pages/page_27.webp" alt="Page 27" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_27.webp'">
+                <img src="images/pages/page_27.webp" alt="Page 27" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;">
                 <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 27 页 📄</div>
               </div>
               <div class="page-thumb-card" onclick="jumpToPage(28)" title="点击跳转至第 28 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
-                <img src="images/pages/page_28.webp" alt="Page 28" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_28.webp'">
+                <img src="images/pages/page_28.webp" alt="Page 28" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;">
                 <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 28 页 📄</div>
               </div>
               <div class="page-thumb-card" onclick="jumpToPage(29)" title="点击跳转至第 29 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
-                <img src="images/pages/page_29.webp" alt="Page 29" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_29.webp'">
+                <img src="images/pages/page_29.webp" alt="Page 29" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;">
                 <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 29 页 📄</div>
               </div>
             </div>
@@ -639,11 +641,11 @@
             </div>
             <div class="unit-page-gallery" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 0.85rem;">
               <div class="page-thumb-card" onclick="jumpToPage(30)" title="点击跳转至第 30 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
-                <img src="images/pages/page_30.webp" alt="Page 30" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_30.webp'">
+                <img src="images/pages/page_30.webp" alt="Page 30" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;">
                 <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 30 页 📄</div>
               </div>
               <div class="page-thumb-card" onclick="jumpToPage(31)" title="点击跳转至第 31 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
-                <img src="images/pages/page_31.webp" alt="Page 31" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_31.webp'">
+                <img src="images/pages/page_31.webp" alt="Page 31" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;">
                 <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 31 页 📄</div>
               </div>
             </div>
@@ -770,35 +772,35 @@
             </div>
             <div class="unit-page-gallery" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 0.85rem;">
               <div class="page-thumb-card" onclick="jumpToPage(32)" title="点击跳转至第 32 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
-                <img src="images/pages/page_32.webp" alt="Page 32" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_32.webp'">
+                <img src="images/pages/page_32.webp" alt="Page 32" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;">
                 <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 32 页 📄</div>
               </div>
               <div class="page-thumb-card" onclick="jumpToPage(33)" title="点击跳转至第 33 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
-                <img src="images/pages/page_33.webp" alt="Page 33" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_33.webp'">
+                <img src="images/pages/page_33.webp" alt="Page 33" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;">
                 <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 33 页 📄</div>
               </div>
               <div class="page-thumb-card" onclick="jumpToPage(34)" title="点击跳转至第 34 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
-                <img src="images/pages/page_34.webp" alt="Page 34" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_34.webp'">
+                <img src="images/pages/page_34.webp" alt="Page 34" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;">
                 <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 34 页 📄</div>
               </div>
               <div class="page-thumb-card" onclick="jumpToPage(35)" title="点击跳转至第 35 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
-                <img src="images/pages/page_35.webp" alt="Page 35" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_35.webp'">
+                <img src="images/pages/page_35.webp" alt="Page 35" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;">
                 <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 35 页 📄</div>
               </div>
               <div class="page-thumb-card" onclick="jumpToPage(36)" title="点击跳转至第 36 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
-                <img src="images/pages/page_36.webp" alt="Page 36" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_36.webp'">
+                <img src="images/pages/page_36.webp" alt="Page 36" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;">
                 <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 36 页 📄</div>
               </div>
               <div class="page-thumb-card" onclick="jumpToPage(37)" title="点击跳转至第 37 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
-                <img src="images/pages/page_37.webp" alt="Page 37" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_37.webp'">
+                <img src="images/pages/page_37.webp" alt="Page 37" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;">
                 <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 37 页 📄</div>
               </div>
               <div class="page-thumb-card" onclick="jumpToPage(38)" title="点击跳转至第 38 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
-                <img src="images/pages/page_38.webp" alt="Page 38" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_38.webp'">
+                <img src="images/pages/page_38.webp" alt="Page 38" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;">
                 <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 38 页 📄</div>
               </div>
               <div class="page-thumb-card" onclick="jumpToPage(39)" title="点击跳转至第 39 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
-                <img src="images/pages/page_39.webp" alt="Page 39" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_39.webp'">
+                <img src="images/pages/page_39.webp" alt="Page 39" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;">
                 <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 39 页 📄</div>
               </div>
             </div>
@@ -911,35 +913,35 @@
             </div>
             <div class="unit-page-gallery" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 0.85rem;">
               <div class="page-thumb-card" onclick="jumpToPage(40)" title="点击跳转至第 40 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
-                <img src="images/pages/page_40.webp" alt="Page 40" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_40.webp'">
+                <img src="images/pages/page_40.webp" alt="Page 40" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;">
                 <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 40 页 📄</div>
               </div>
               <div class="page-thumb-card" onclick="jumpToPage(41)" title="点击跳转至第 41 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
-                <img src="images/pages/page_41.webp" alt="Page 41" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_41.webp'">
+                <img src="images/pages/page_41.webp" alt="Page 41" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;">
                 <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 41 页 📄</div>
               </div>
               <div class="page-thumb-card" onclick="jumpToPage(42)" title="点击跳转至第 42 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
-                <img src="images/pages/page_42.webp" alt="Page 42" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_42.webp'">
+                <img src="images/pages/page_42.webp" alt="Page 42" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;">
                 <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 42 页 📄</div>
               </div>
               <div class="page-thumb-card" onclick="jumpToPage(43)" title="点击跳转至第 43 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
-                <img src="images/pages/page_43.webp" alt="Page 43" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_43.webp'">
+                <img src="images/pages/page_43.webp" alt="Page 43" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;">
                 <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 43 页 📄</div>
               </div>
               <div class="page-thumb-card" onclick="jumpToPage(44)" title="点击跳转至第 44 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
-                <img src="images/pages/page_44.webp" alt="Page 44" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_44.webp'">
+                <img src="images/pages/page_44.webp" alt="Page 44" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;">
                 <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 44 页 📄</div>
               </div>
               <div class="page-thumb-card" onclick="jumpToPage(45)" title="点击跳转至第 45 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
-                <img src="images/pages/page_45.webp" alt="Page 45" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_45.webp'">
+                <img src="images/pages/page_45.webp" alt="Page 45" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;">
                 <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 45 页 📄</div>
               </div>
               <div class="page-thumb-card" onclick="jumpToPage(46)" title="点击跳转至第 46 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
-                <img src="images/pages/page_46.webp" alt="Page 46" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_46.webp'">
+                <img src="images/pages/page_46.webp" alt="Page 46" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;">
                 <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 46 页 📄</div>
               </div>
               <div class="page-thumb-card" onclick="jumpToPage(47)" title="点击跳转至第 47 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
-                <img src="images/pages/page_47.webp" alt="Page 47" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_47.webp'">
+                <img src="images/pages/page_47.webp" alt="Page 47" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;">
                 <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 47 页 📄</div>
               </div>
             </div>
@@ -1069,35 +1071,35 @@
             </div>
             <div class="unit-page-gallery" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 0.85rem;">
               <div class="page-thumb-card" onclick="jumpToPage(48)" title="点击跳转至第 48 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
-                <img src="images/pages/page_48.webp" alt="Page 48" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_48.webp'">
+                <img src="images/pages/page_48.webp" alt="Page 48" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;">
                 <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 48 页 📄</div>
               </div>
               <div class="page-thumb-card" onclick="jumpToPage(49)" title="点击跳转至第 49 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
-                <img src="images/pages/page_49.webp" alt="Page 49" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_49.webp'">
+                <img src="images/pages/page_49.webp" alt="Page 49" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;">
                 <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 49 页 📄</div>
               </div>
               <div class="page-thumb-card" onclick="jumpToPage(50)" title="点击跳转至第 50 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
-                <img src="images/pages/page_50.webp" alt="Page 50" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_50.webp'">
+                <img src="images/pages/page_50.webp" alt="Page 50" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;">
                 <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 50 页 📄</div>
               </div>
               <div class="page-thumb-card" onclick="jumpToPage(51)" title="点击跳转至第 51 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
-                <img src="images/pages/page_51.webp" alt="Page 51" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_51.webp'">
+                <img src="images/pages/page_51.webp" alt="Page 51" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;">
                 <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 51 页 📄</div>
               </div>
               <div class="page-thumb-card" onclick="jumpToPage(52)" title="点击跳转至第 52 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
-                <img src="images/pages/page_52.webp" alt="Page 52" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_52.webp'">
+                <img src="images/pages/page_52.webp" alt="Page 52" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;">
                 <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 52 页 📄</div>
               </div>
               <div class="page-thumb-card" onclick="jumpToPage(53)" title="点击跳转至第 53 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
-                <img src="images/pages/page_53.webp" alt="Page 53" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_53.webp'">
+                <img src="images/pages/page_53.webp" alt="Page 53" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;">
                 <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 53 页 📄</div>
               </div>
               <div class="page-thumb-card" onclick="jumpToPage(54)" title="点击跳转至第 54 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
-                <img src="images/pages/page_54.webp" alt="Page 54" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_54.webp'">
+                <img src="images/pages/page_54.webp" alt="Page 54" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;">
                 <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 54 页 📄</div>
               </div>
               <div class="page-thumb-card" onclick="jumpToPage(55)" title="点击跳转至第 55 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
-                <img src="images/pages/page_55.webp" alt="Page 55" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_55.webp'">
+                <img src="images/pages/page_55.webp" alt="Page 55" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;">
                 <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 55 页 📄</div>
               </div>
             </div>
@@ -1142,11 +1144,11 @@
             </div>
             <div class="unit-page-gallery" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 0.85rem;">
               <div class="page-thumb-card" onclick="jumpToPage(56)" title="点击跳转至第 56 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
-                <img src="images/pages/page_56.webp" alt="Page 56" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_56.webp'">
+                <img src="images/pages/page_56.webp" alt="Page 56" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;">
                 <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 56 页 📄</div>
               </div>
               <div class="page-thumb-card" onclick="jumpToPage(57)" title="点击跳转至第 57 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
-                <img src="images/pages/page_57.webp" alt="Page 57" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_57.webp'">
+                <img src="images/pages/page_57.webp" alt="Page 57" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;">
                 <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 57 页 📄</div>
               </div>
             </div>
@@ -1193,19 +1195,19 @@
             </div>
             <div class="unit-page-gallery" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 0.85rem;">
               <div class="page-thumb-card" onclick="jumpToPage(58)" title="点击跳转至第 58 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
-                <img src="images/pages/page_58.webp" alt="Page 58" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_58.webp'">
+                <img src="images/pages/page_58.webp" alt="Page 58" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;">
                 <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 58 页 📄</div>
               </div>
               <div class="page-thumb-card" onclick="jumpToPage(59)" title="点击跳转至第 59 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
-                <img src="images/pages/page_59.webp" alt="Page 59" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_59.webp'">
+                <img src="images/pages/page_59.webp" alt="Page 59" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;">
                 <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 59 页 📄</div>
               </div>
               <div class="page-thumb-card" onclick="jumpToPage(60)" title="点击跳转至第 60 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
-                <img src="images/pages/page_60.webp" alt="Page 60" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_60.webp'">
+                <img src="images/pages/page_60.webp" alt="Page 60" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;">
                 <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 60 页 📄</div>
               </div>
               <div class="page-thumb-card" onclick="jumpToPage(61)" title="点击跳转至第 61 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
-                <img src="images/pages/page_61.webp" alt="Page 61" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_61.webp'">
+                <img src="images/pages/page_61.webp" alt="Page 61" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;">
                 <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 61 页 📄</div>
               </div>
             </div>
@@ -1228,19 +1230,19 @@
             </div>
             <div class="unit-page-gallery" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 0.85rem;">
               <div class="page-thumb-card" onclick="jumpToPage(58)" title="点击跳转至第 58 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
-                <img src="images/pages/page_58.webp" alt="Page 58" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_58.webp'">
+                <img src="images/pages/page_58.webp" alt="Page 58" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;">
                 <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 58 页 📄</div>
               </div>
               <div class="page-thumb-card" onclick="jumpToPage(59)" title="点击跳转至第 59 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
-                <img src="images/pages/page_59.webp" alt="Page 59" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_59.webp'">
+                <img src="images/pages/page_59.webp" alt="Page 59" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;">
                 <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 59 页 📄</div>
               </div>
               <div class="page-thumb-card" onclick="jumpToPage(60)" title="点击跳转至第 60 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
-                <img src="images/pages/page_60.webp" alt="Page 60" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_60.webp'">
+                <img src="images/pages/page_60.webp" alt="Page 60" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;">
                 <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 60 页 📄</div>
               </div>
               <div class="page-thumb-card" onclick="jumpToPage(61)" title="点击跳转至第 61 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
-                <img src="images/pages/page_61.webp" alt="Page 61" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_61.webp'">
+                <img src="images/pages/page_61.webp" alt="Page 61" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;">
                 <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 61 页 📄</div>
               </div>
             </div>
@@ -1284,27 +1286,27 @@
             </div>
             <div class="unit-page-gallery" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 0.85rem;">
               <div class="page-thumb-card" onclick="jumpToPage(66)" title="点击跳转至第 66 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
-                <img src="images/pages/page_66.webp" alt="Page 66" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_66.webp'">
+                <img src="images/pages/page_66.webp" alt="Page 66" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;">
                 <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 66 页 📄</div>
               </div>
               <div class="page-thumb-card" onclick="jumpToPage(67)" title="点击跳转至第 67 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
-                <img src="images/pages/page_67.webp" alt="Page 67" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_67.webp'">
+                <img src="images/pages/page_67.webp" alt="Page 67" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;">
                 <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 67 页 📄</div>
               </div>
               <div class="page-thumb-card" onclick="jumpToPage(68)" title="点击跳转至第 68 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
-                <img src="images/pages/page_68.webp" alt="Page 68" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_68.webp'">
+                <img src="images/pages/page_68.webp" alt="Page 68" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;">
                 <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 68 页 📄</div>
               </div>
               <div class="page-thumb-card" onclick="jumpToPage(69)" title="点击跳转至第 69 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
-                <img src="images/pages/page_69.webp" alt="Page 69" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_69.webp'">
+                <img src="images/pages/page_69.webp" alt="Page 69" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;">
                 <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 69 页 📄</div>
               </div>
               <div class="page-thumb-card" onclick="jumpToPage(70)" title="点击跳转至第 70 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
-                <img src="images/pages/page_70.webp" alt="Page 70" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_70.webp'">
+                <img src="images/pages/page_70.webp" alt="Page 70" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;">
                 <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 70 页 📄</div>
               </div>
               <div class="page-thumb-card" onclick="jumpToPage(71)" title="点击跳转至第 71 页高清原版" style="cursor: pointer; text-align: center; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease;">
-                <img src="images/pages/page_71.webp" alt="Page 71" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;" onerror="this.src='image/pages/page_71.webp'">
+                <img src="images/pages/page_71.webp" alt="Page 71" style="width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid #f1f5f9; display: block;">
                 <div style="padding: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #475569; background: #f8fafc;">第 71 页 📄</div>
               </div>
             </div>
@@ -1329,7 +1331,7 @@
 
             <div class="pageview-grid">
               <div class="page-image-container">
-                <img id="pdfPageImage" src="images/pages/page_01.webp" alt="Textbook Page" class="textbook-page-img">
+                <img id="pdfPageImage" src="images/pages/page_01.webp" alt="Textbook Page" class="textbook-page-img" decoding="async">
               </div>
               <div class="page-text-sidebar">
                 <h3 id="pageTranscriptTitle" class="transcript-header">第 1 页 文本内容</h3>
@@ -1610,8 +1612,9 @@
       }
     }
 
-    // Cached DOM Text Search Index
+    // Cached DOM Text Search Index & Debounced Search Handler
     let searchIndexCache = null;
+    let searchDebounceTimer = null;
 
     function getSearchIndex() {
       if (!searchIndexCache) {
@@ -1624,20 +1627,25 @@
     }
 
     function handleSearch() {
-      const q = document.getElementById('searchInput').value.toLowerCase().trim();
-      const index = getSearchIndex();
+      clearTimeout(searchDebounceTimer);
+      searchDebounceTimer = setTimeout(() => {
+        const q = document.getElementById('searchInput').value.toLowerCase().trim();
+        const index = getSearchIndex();
 
-      if (!q) {
-        index.forEach(item => item.element.style.display = '');
-        return;
-      }
+        requestAnimationFrame(() => {
+          if (!q) {
+            index.forEach(item => item.element.style.display = '');
+            return;
+          }
 
-      setViewMode('interactive');
-      document.querySelectorAll('.unit-section').forEach(sec => sec.style.display = 'block');
+          setViewMode('interactive');
+          document.querySelectorAll('.unit-section').forEach(sec => sec.style.display = 'block');
 
-      index.forEach(item => {
-        item.element.style.display = item.text.includes(q) ? '' : 'none';
-      });
+          index.forEach(item => {
+            item.element.style.display = item.text.includes(q) ? '' : 'none';
+          });
+        });
+      }, 150);
     }
 
     // ===== QUIZ ENGINE =====

@@ -52,7 +52,12 @@ const server = http.createServer((req, res) => {
     const ext = path.extname(filePath).toLowerCase();
     const contentType = MIME_TYPES[ext] || 'application/octet-stream';
     const fileSize = stats.size;
-    const cacheControl = ext === '.html' ? 'no-cache' : 'public, max-age=86400';
+    let cacheControl = 'no-cache';
+    if (ext === '.webp' || ext === '.png' || ext === '.jpg' || ext === '.mp3' || ext === '.wav') {
+      cacheControl = 'public, max-age=31536000, immutable';
+    } else if (ext === '.css' || ext === '.js') {
+      cacheControl = 'public, max-age=86400';
+    }
 
     const range = req.headers.range;
     if (range && contentType.startsWith('audio/')) {

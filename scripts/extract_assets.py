@@ -25,9 +25,9 @@ def extract_pdf_assets():
         mat = fitz.Matrix(zoom, zoom)
         pix = page.get_pixmap(matrix=mat)
         
-        # Save as WebP
+        # Save as optimized WebP
         img = Image.frombytes("RGB", [pix.width, pix.height], pix.samples)
-        img.save(filepath, "WEBP", quality=85)
+        img.save(filepath, "WEBP", quality=80, method=6)
 
         manifest_pages.append({
             "page": page_num,
