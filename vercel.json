@@ -1,11 +1,4 @@
 {
   "buildCommand": "npm run build",
-  "outputDirectory": "dist",
-  "cleanUrls": true,
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/$1"
-    }
-  ]
+  "outputDirectory": "dist"
 }
